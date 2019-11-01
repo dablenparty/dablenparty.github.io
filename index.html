@@ -12,13 +12,11 @@
             <div id="header_box">
                 <h1>Coding Hub</h1>
                 Dark Mode: <input type="checkbox" id="modeToggle" onclick="modeFunc()">
-                <p id="modeNotif" style="display: none; font-size: 80%;">Dark Mode enabled!</p>
-            
                 <p>This is where you can easily access anything regarding your coding adventure.</p>
             </div>
             <hr>
             <div id="github_box">
-                <h2>GitHub Resources (<a title="GitHub Homepage" href="https://github.com/" target="_blank">Homepage</a>)</h2>
+                <h2>GitHub Resources (<a id="githubHome" title="GitHub Homepage" href="https://github.com/" target="_blank">Homepage</a>)</h2>
                 <p title="Repository for this page"><a href="https://github.com/dablenparty/dablenparty.github.io" target="_blank">Coding Hub Repository</a></p>
                 <p title="Python repository"><a href="https://github.com/dablenparty/python" target="_blank">Python</a></p>
             </div>
@@ -44,12 +42,10 @@
 
             function modeFunc() {
                 if (checkBox.checked == true) {
-                    notif.style.display = "block";
                     document.documentElement.setAttribute('data-theme','dark');
                     localStorage.setItem('theme','dark');
                 } 
                 else {
-                    notif.style.display = "none";
                     document.documentElement.setAttribute('data-theme','light');
                     localStorage.setItem('theme','light');
                 }
@@ -62,7 +58,6 @@
 
                 if (currentTheme === 'dark') {
                     checkBox.checked = true;
-                    notif.style.display = "block";
                 }
             }
         </script>

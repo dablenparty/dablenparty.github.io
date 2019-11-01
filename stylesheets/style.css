@@ -43,3 +43,6 @@ a:active{
       width: 204px;
       height: 102px;
   }
+#githubHome:hover {
+  font-size: 100%;
+}
