@@ -1,0 +1,37 @@
+/* Stylesheet for learner.html */
+body {
+    font-family: Roboto Mono, monospace;
+    text-align: left;
+    }
+
+@media screen and (max-width: 400px) {
+    body {
+        text-align: center;
+    }
+    }
+a:link {
+    color: darkred;
+    text-decoration: none;
+}
+a:link, a:visited {
+        color: darkred;
+        text-decoration: none;
+    }
+a:hover{
+        color: darksalmon;
+        text-decoration: underline;
+        font-size: 102%;
+    }
+a:active{
+        color: firebrick;
+        font-size: 98%;
+    }
+#fontsLogo{
+        width: 200px;
+        height: 100px;
+        border: 0;
+    }
+#fontsLogo:hover{
+        width: 204px;
+        height: 102px;
+    }
