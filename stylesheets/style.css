@@ -1,21 +1,32 @@
 /* Stylesheet for index.html */
+:root {
+  --primary-color: white;
+  --font-color: black;
+  --link-hover-color: darkred;
+}
+
+[data-theme="dark"]{
+  --primary-color: #3b3b3b;
+  --font-color: white;
+  --link-hover-color: darksalmon;
+}
 body {
   font-family: Roboto Mono, monospace;
   text-align: left;
-  background-color: #3b3b3b;
-  color: white;
+  background-color: var(--primary-color);
+  color: var(--font-color);
   }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 480px) {
   body {
       text-align: center;
   }
   }
 a:link, a:visited {
-      color: white;
+      color: var(--font-color);
       text-decoration: none;
   }
 a:hover{
-      color: darksalmon;
+      color: var(--link-hover-color);
       text-decoration: underline;
       font-size: 102%;
   }
