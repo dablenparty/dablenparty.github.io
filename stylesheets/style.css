@@ -6,11 +6,16 @@ body {
   color: white;
   }
 
-@media screen and (max-width: 400px) {
+@media handheld {
   body {
       text-align: center;
   }
   }
+/*@media screen and (max-width: 400px) {
+  body {
+      text-align: center;
+  }
+  }*/
 a:link, a:visited {
       color: white;
       text-decoration: none;
