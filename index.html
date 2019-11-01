@@ -11,6 +11,10 @@
             <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
 
             <h1>Coding Hub</h1>
+
+            Light Mode: <input type="checkbox" id="modeToggle" onclick="modeFunc()">
+            <p id="modeNotif" style="display: none;">Light Mode enabled!</p>
+
             <p>This is where you can easily access anything regarding your coding adventure.</p>
             <hr>
             <h2>GitHub Resources (<a title="GitHub Homepage" href="https://github.com/" target="_blank">Homepage</a>)</h2>
@@ -34,4 +38,17 @@
                 <img id="fontsLogo" src="https://www.gstatic.com/images/icons/material/apps/fonts/1x/opengraph_color_1200dp.png" alt="Google Fonts Logo">
             </a>
         </body>
+        <script>
+            function modeFunc() {
+                let checkBox = document.getElementById('modeToggle');
+                let notif = document.getElementById('modeNotif');
+                let body = document.getElementsByTagName("body");
+                if (checkBox.checked == true) {
+                    notif.style.display = "block";
+                } 
+                else {
+                    notif.style.display = "none";
+                }
+            }
+        </script>
 </html>
