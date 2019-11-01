@@ -9,36 +9,36 @@
     </head>
         <body>
             <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
-
-            <h1>Coding Hub</h1>
-
-            Dark Mode: <input type="checkbox" id="modeToggle" onclick="modeFunc()">
-            <p id="modeNotif" style="display: none; font-size: 80%;">Dark Mode enabled!</p>
-
-            <p>This is where you can easily access anything regarding your coding adventure.</p>
+            <div id="header_box">
+                <h1>Coding Hub</h1>
+                Dark Mode: <input type="checkbox" id="modeToggle" onclick="modeFunc()">
+                <p id="modeNotif" style="display: none; font-size: 80%;">Dark Mode enabled!</p>
+            
+                <p>This is where you can easily access anything regarding your coding adventure.</p>
+            </div>
             <hr>
-            <h2>GitHub Resources (<a title="GitHub Homepage" href="https://github.com/" target="_blank">Homepage</a>)</h2>
-            <p title="Repository for this page"><a href="https://github.com/dablenparty/dablenparty.github.io" target="_blank">Coding Hub Repository</a></p>
-            <p title="Python repository"><a href="https://github.com/dablenparty/python" target="_blank">Python</a></p>
-
+            <div id="github_box">
+                <h2>GitHub Resources (<a title="GitHub Homepage" href="https://github.com/" target="_blank">Homepage</a>)</h2>
+                <p title="Repository for this page"><a href="https://github.com/dablenparty/dablenparty.github.io" target="_blank">Coding Hub Repository</a></p>
+                <p title="Python repository"><a href="https://github.com/dablenparty/python" target="_blank">Python</a></p>
+            </div>
             <hr>
-
-            <h2>Learning Sources</h2>
-            <p title="HTML Online Textbook"><a href="https://www.w3schools.com/html/default.asp" target="_blank">W3 Schools HTML</a></p>
-            <p title="JavaScript Online Textbook"><a href="https://www.w3schools.com/js/default.asp" target="_blank">W3 Schools JavaScript</a> </p>
-            <p title="JavaScript Video"><a href="https://youtu.be/PkZNo7MFNFg?t=3959" target="_blank">FreeCodeCamp Beginner JavaScript Course</a></p>
-            <p title="Python Online Textbook"><a href="https://automatetheboringstuff.com" target="_blank">Automate the Boring Stuff with Python</a> </p>
-
+            <div id="learning_box">
+                <h2>Learning Sources</h2>
+                <p title="HTML Online Textbook"><a href="https://www.w3schools.com/html/default.asp" target="_blank">W3 Schools HTML</a></p>
+                <p title="JavaScript Online Textbook"><a href="https://www.w3schools.com/js/default.asp" target="_blank">W3 Schools JavaScript</a> </p>
+                <p title="JavaScript Video"><a href="https://youtu.be/PkZNo7MFNFg?t=3959" target="_blank">FreeCodeCamp Beginner JavaScript Course</a></p>
+                <p title="Python Online Textbook"><a href="https://automatetheboringstuff.com" target="_blank">Automate the Boring Stuff with Python</a> </p>
+            </div>
             <hr>
-
-            <h2>Useful Links</h2>
-            <!-- Text link to Google Fonts
-                <p><a href="https://fonts.google.com" target="_blank">Google Fonts</a></p> -->
-            <a href="https://fonts.google.com" target="_blank">
-                <img id="fontsLogo" src="https://www.gstatic.com/images/icons/material/apps/fonts/1x/opengraph_color_1200dp.png" alt="Google Fonts Logo">
-            </a>
+            <div id="links_box">
+                <h2>Useful Links</h2>
+                <a href="https://fonts.google.com" target="_blank">
+                    <img id="fontsLogo" src="https://www.gstatic.com/images/icons/material/apps/fonts/1x/opengraph_color_1200dp.png" alt="Google Fonts Logo">
+                </a>
+            </div>
         </body>
-        <script>
+        <script id="dark_mode_toggle">
             const checkBox = document.getElementById('modeToggle');
             const notif = document.getElementById('modeNotif');
 
