@@ -1,11 +1,11 @@
 /* Stylesheet for index.html */
-:root {
+:root { /*Sets the default color scheme for the page (a.k.a. Light Mode).*/
   --primary-color: white;
   --font-color: black;
   --link-hover-color: darkred;
 }
 
-[data-theme="dark"]{
+[data-theme="dark"]{ /*Sets the color scheme for the data set titled "data-theme" and assigns this set the name 'dark'.*/
   --primary-color: #3b3b3b;
   --font-color: white;
   --link-hover-color: darksalmon;
@@ -16,12 +16,12 @@ body {
   background-color: var(--primary-color);
   color: var(--font-color);
   }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 480px) { /*Centers the text on all screens with a CSS width less than 480px. Used for mobile formatting.*/
   body {
       text-align: center;
   }
   }
-a:link, a:visited {
+a:link, a:visited { /*These lines style every element with the 'a' tag (HTML links) for the different states they may be seen in*/
       color: var(--font-color);
       text-decoration: none;
   }
@@ -34,15 +34,19 @@ a:active{
       color: firebrick;
       font-size: 98%;
   }
-#fontsLogo{
+#fontsLogo{ /*Sizes the Google Fonts logo*/
       width: 200px;
       height: 100px;
       border: 0;
   }
-#fontsLogo:hover{
+#fontsLogo:hover{ /*Styles the Google Fonts logo for different states (since it acts as a link)*/
       width: 204px;
       height: 102px;
   }
-#githubHome:hover {
+#fontsLogo:active{
+  width: 196px;
+  height: 98px;
+}
+#githubHome:hover { /*Overwrites the styling above, removing the resizing on the GitHub Homepage link*/
   font-size: 100%;
 }
