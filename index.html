@@ -9,19 +9,19 @@
     </head>
         <body>
             <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
-            <div id="header_box">
+            <div class="header">
                 <h1>Coding Hub</h1>
                 Dark Mode: <input type="checkbox" id="modeToggle" onclick="modeFunc()"> <!-- Checkbox to enable/disable Dark Mode -->
                 <p>This is where you can easily access anything regarding your coding adventure.</p>
             </div>
             <hr>
-            <div id="github_box"> <!-- Repository links -->
+            <div class="github-box"> <!-- Repository links -->
                 <h2>GitHub Resources (<a id="githubHome" title="GitHub Homepage" href="https://github.com/" target="_blank">Homepage</a>)</h2>
                 <p title="Repository for this page"><a href="https://github.com/dablenparty/dablenparty.github.io" target="_blank">Coding Hub Repository</a></p>
                 <p title="Python repository"><a href="https://github.com/dablenparty/python" target="_blank">Python</a></p>
             </div>
             <hr>
-            <div id="learning_box"> <!-- Links to my most common learning resources -->
+            <div class="learninig-box"> <!-- Links to my most common learning resources -->
                 <h2>Learning Sources</h2>
                 <p title="HTML Online Textbook"><a href="https://www.w3schools.com/html/default.asp" target="_blank">W3 Schools HTML</a></p>
                 <p title="JavaScript Online Textbook"><a href="https://www.w3schools.com/js/default.asp" target="_blank">W3 Schools JavaScript</a> </p>
@@ -29,36 +29,13 @@
                 <p title="Python Online Textbook"><a href="https://automatetheboringstuff.com" target="_blank">Automate the Boring Stuff with Python</a> </p>
             </div>
             <hr>
-            <div id="links_box">
+            <div class="links-box">
                 <h2>Useful Links</h2>
                 <a href="https://fonts.google.com" target="_blank">
                     <img id="fontsLogo" src="https://www.gstatic.com/images/icons/material/apps/fonts/1x/opengraph_color_1200dp.png" alt="Google Fonts Logo"> <!-- Instead of text, this image is placed as the link -->
                 </a>
             </div>
         </body>
-        <script id="dark_mode_toggle"> //JavaScript for the Dark Mode checkbox
-            const checkBox = document.getElementById('modeToggle');
-            const notif = document.getElementById('modeNotif');
-            //Defining the function listed under the "onclick" parameter in the checkbox 
-            function modeFunc() {
-                if (checkBox.checked == true) {
-                    document.documentElement.setAttribute('data-theme','dark'); //Checks if the checkbox is checked, and if so, sets the attribute titled "data-theme" (defined in style.css) to "dark"
-                    localStorage.setItem('theme','dark'); //Stores the attribute in the line above in the browsers local storage under the title "theme" so that it remembers the users option
-                } 
-                else {
-                    document.documentElement.setAttribute('data-theme','light');
-                    localStorage.setItem('theme','light');
-                }
-            }
-            checkBox.addEventListener('change', modeFunc, false) //Adds an event listener to the function "modeFunc()"
-            const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null; //Sets the variable "currentTheme" to whatever is stored in "theme" for a returning user
-
-            if (currentTheme) {
-                document.documentElement.setAttribute('data-theme', currentTheme); //Sets the theme to whatever "currentTheme" is
-
-                if (currentTheme === 'dark') {
-                    checkBox.checked = true; //If Dark Mode is on, noted by "theme" being set to 'dark', then it checks the checkbox for consistency
-                }
-            }
+        <script src="dark-mode.js"> //JavaScript for the Dark Mode checkbox
         </script>
 </html>
