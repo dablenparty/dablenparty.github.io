@@ -1,5 +1,4 @@
 const checkBox = document.getElementById('modeToggle');
-const notif = document.getElementById('modeNotif');
 //Defining the function listed under the "onclick" parameter in the checkbox 
 function modeFunc() {
     if (checkBox.checked == true) {
