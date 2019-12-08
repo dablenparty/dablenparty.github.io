@@ -85,11 +85,6 @@ a:active{
   color: var(--primary-color);
 }
 
-/* Hide the link that should open and close the topnav on small screens */
-.topnav .icon {
-  display: none;
-}
-
 .dropdown {
   float: left;
   overflow: hidden;
