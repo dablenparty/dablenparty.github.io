@@ -1,24 +1,28 @@
 /* Stylesheet for index.html */
 :root { /*Sets the default color scheme for the page (a.k.a. Light Mode).*/
   --primary-color: white;
+  --secondary-color: #3b3b3b;
   --font-color: black;
   --link-hover-color: darkred;
 }
 
 [data-theme="dark"]{ /*Sets the color scheme for the data set titled "data-theme" and assigns this set the name 'dark'.*/
   --primary-color: #3b3b3b;
+  --secondary-color: white;
   --font-color: white;
   --link-hover-color: darksalmon;
 }
 body {
   font-family: Roboto Mono, monospace;
-  text-align: left;
   background-color: var(--primary-color);
   color: var(--font-color);
   }
 @media screen and (max-width: 480px) { /*Centers the text on all screens with a CSS width less than 480px. Used for mobile formatting.*/
   body {
       text-align: center;
+  }
+  .topnav a{
+    float: none;
   }
   }
 a:link, a:visited { /*These lines style every element with the 'a' tag (HTML links) for the different states they may be seen in*/
@@ -49,4 +53,149 @@ a:active{
 }
 #githubHome:hover { /*Overwrites the styling above, removing the resizing on the GitHub Homepage link*/
   font-size: 100%;
+}
+
+/* Style the links inside the navigation bar */
+.topnav {
+  overflow: hidden;
+  border-bottom: transparent;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: var(--secondary-color);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: inherit, monospace;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown:hover .dropbtn:hover{
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+.dropdown .dropbtn {
+  cursor: pointer;
+  font-size: 18px;  
+  border: none;
+  outline: none;
+  color: var(--secondary-color);
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  font-weight: bold;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--secondary-color);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: var(--primary-color);
+  background-color: transparent;
+  font-family: inherit;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.show {
+  display: block;
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  background-color: var(--secondary-color);
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: var(--secondary-color);
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border-top: none;
+}
+
+.tabcontent {
+  animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.inputedit {
+  background-color: transparent;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+
+.inputedit:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
 }
