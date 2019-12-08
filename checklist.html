@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang = en-US>
+    <head>
+        <link rel="stylesheet" href="style.css" media="screen" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- For the icon -->
+        <title>Star Citizen Checklist</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+        <body>
+            <input style="display: none;" type="checkbox" id="modeToggle" onclick="modeFunc()"> <!-- Blank Checkbox for stylesheet-->
+            <h1>Star Citizen Project Checklist</h1>
+            <div class="topnav" id="topNavBar">
+                <a href="#home" class="tablinks" onclick="openDrop(event, 'home')">Home</a>
+                <div class="dropdown">
+                    <button class="dropbtn" onclick="dropTests(event, '10m')">Drop Tests
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content" id="dropTestMenu">
+                        <a href="#10m" class="tablinks" onclick="openDrop(event, '10m')">10 Meters</a>
+                        <a href="#">100 Meters</a>
+                        <a href="#">Who knows</a>
+                    </div>
+                </div> 
+                <a href="#powerAlloc" class="tablinks" onclick="openDrop(event, 'power')">Power Alloc</a>
+            </div>
+            <div id="home" class="tabcontent">
+                <p>This page is where all of the data for my Star Citizen Physics Analysis project is.</p>
+            </div>
+            <div id="10m" class="tabcontent">
+                <h2>10 Meter Drop Tests</h2>
+                <p>This test was performed by ascending 10 meters above the ground and falling, calculating the acceleration over that distance.</p>
+                <br>
+                <h3>Hurston</h3>
+                <p id="hurstonTime">Time to Ground: NO INPUT</p>
+                <p id="hurstonAcc">Acceleration Constant: NO INPUT</p>
+            </div>
+            <div id="power" class="tabcontent">
+                <h2>Power Allocation Tests</h2>
+                <p>These tested whether allocating more power to thrusters would affect acceleration.</p>
+                <br>
+                <h3>Terrapin</h3>
+                <p>33%: NO INPUT</p>
+                <p>100%: NO INPUT</p>
+                <br>
+                <h3>Arrow</h3>
+                <p>33%: NO INPUT</p>
+                <p>100%: NO INPUT</p>
+                <br>
+                <h3>Super Hornet</h3>
+                <p>33%: NO INPUT</p>
+                <p>100%: NO INPUT</p>
+            </div>
+        </body>
+        <script src="dark-mode.js">
+        </script>
+        <script>
+                /* When the user clicks on the button, 
+                toggle between hiding and showing the dropdown content */
+                function dropTests() {
+                  document.getElementById("dropTestMenu").classList.toggle("show");
+                }
+                
+                // Close the dropdown if the user clicks outside of it
+                window.onclick = function(e) {
+                  if (!e.target.matches('.dropbtn')) {
+                  var dropTestMenu = document.getElementById("dropTestMenu");
+                    if (dropTestMenu.classList.contains('show')) {
+                      dropTestMenu.classList.remove('show');
+                    }
+                  }
+                }
+        </script>
+        <script src="dropdown.js">
+        </script>
+</html>

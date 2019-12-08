@@ -1,0 +1,43 @@
+<!-- This is the hub for everything you'll do in coding. Accesses all of yours project files, sites, etc. -->
+<!-- It can be found here: https://dablenparty.github.io/ -->
+<!doctype html>
+<html lang="en-US">
+    <head>
+        <link rel="stylesheet" href="style.css" media="screen" /> <!-- Links to the stylesheet in the repository -->
+        <title>Coding Hub</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+        <body>
+            <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+            <div class="header">
+                <h1>Coding Hub</h1>
+                Dark Mode: <input type="checkbox" id="modeToggle" onclick="modeFunc()"> <!-- Checkbox to enable/disable Dark Mode -->
+                <p>This is where you can easily access anything regarding your coding adventure.</p>
+				<p style="font-size: 133%"><a href="apps_index.html">App Page</a></p><!-- Delete this once you've got the new phone -->
+            </div>
+            <hr>
+            <div class="github-box"> <!-- Repository links -->
+                <h2>GitHub Resources (<a id="githubHome" title="GitHub Homepage" href="https://github.com/" target="_blank">Homepage</a>)</h2>
+                <p title="Repository for this page"><a href="https://github.com/dablenparty/dablenparty.github.io" target="_blank">Coding Hub Repository</a></p>
+                <p title="Python repository"><a href="https://github.com/dablenparty/python" target="_blank">Python</a></p>
+            </div>
+            <hr>
+            <div class="learning-box"> <!-- Links to my most common learning resources -->
+                <h2>Learning Sources</h2>
+                <p title="HTML Online Textbook"><a href="https://www.w3schools.com/html/default.asp" target="_blank">W3 Schools HTML</a></p>
+                <p title="JavaScript Online Textbook"><a href="https://www.w3schools.com/js/default.asp" target="_blank">W3 Schools JavaScript</a> </p>
+                <p title="JavaScript Video"><a href="https://youtu.be/PkZNo7MFNFg?t=3959" target="_blank">FreeCodeCamp Beginner JavaScript Course</a></p>
+                <p title="Python Online Textbook"><a href="https://automatetheboringstuff.com" target="_blank">Automate the Boring Stuff with Python</a> </p>
+            </div>
+            <hr>
+            <div class="links-box">
+                <h2>Useful Links</h2>
+                <a href="https://fonts.google.com" target="_blank">
+                    <img id="fontsLogo" src="https://www.gstatic.com/images/icons/material/apps/fonts/1x/opengraph_color_1200dp.png" alt="Google Fonts Logo"> <!-- Instead of text, this image is placed as the link -->
+                </a>
+                <p><a href="checklist.html#home">Star Citizen Project Checklist</a></p>
+            </div>
+        </body>
+        <script src="dark-mode.js"> //JavaScript for the Dark Mode checkbox
+        </script>
+</html>
