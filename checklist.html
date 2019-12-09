@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang = en-US>
+<html lang = "en-US">
     <head>
         <link rel="stylesheet" href="style.css" media="screen" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- For the icon -->
@@ -38,17 +38,35 @@
                 <h2>Power Allocation Tests</h2>
                 <p>These tested whether allocating more power to thrusters would affect acceleration.</p>
                 <br>
-                <h3>Terrapin</h3>
-                <p>33%: NO INPUT</p>
-                <p>100%: NO INPUT</p>
-                <br>
-                <h3>Arrow</h3>
-                <p>33%: NO INPUT</p>
-                <p>100%: NO INPUT</p>
-                <br>
-                <h3>Super Hornet</h3>
-                <p>33%: NO INPUT</p>
-                <p>100%: NO INPUT</p>
+                <table>
+					<tr>
+						<th></th>
+						<th colspan="2">Terrapin</th>
+						<th colspan="2">Arrow</th>
+					</tr>
+					<tr>
+						<th>% Alloc</th>
+						<th>Time to Max</th>
+						<th>Time to Stop</th>
+						<th>Time to Max</th>
+						<th>Time to Stop</th>
+                    </tr>
+                    <tr>
+                        <td>33%</td>
+                        <td>4.08s</td>
+                        <td>7.78s</td>
+                        <td>2.23s</td>
+                        <td>3.98s</td>
+                    </tr>
+                    <tr>
+                        <td>100%</td>
+                        <td>4.10s</td>
+                        <td>7.78s</td>
+                        <td>2.22s</td>
+                        <td>4.02s</td>
+                    </tr>
+                </table>
+                <p><strong>Conclusion:</strong> Power Allocation has no purpose other than prevention of overheating</p>
             </div>
         </body>
         <script src="dark-mode.js">

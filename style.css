@@ -194,3 +194,12 @@ a:active{
   background-color: var(--secondary-color);
   color: var(--primary-color);
 }
+
+table, th, td {
+  border: 2px solid var(--secondary-color);
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+  text-align: center;    
+}
