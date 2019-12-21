@@ -4,6 +4,7 @@
 	--primary-color: white;
 	--secondary-color: #3b3b3b;
 	--font-color: black;
+	--background-color: #fff8ee;
 	font-family: 'Poppins', sans-serif;
 }
 
@@ -13,7 +14,7 @@
 	--font-color: white;
 }
 body{
-	background-color: white;
+	background-color: var(--background-color);
 }
 .banner-outer{
 	width: auto;
@@ -21,7 +22,7 @@ body{
 	overflow: hidden;
 }
 .banner {
-	background-image: url("bannerPic.jpg");
+	background-image: url("beauty.png");
 	height: 500px;
 	background-attachment: fixed;
 	background-size: cover;
@@ -34,16 +35,15 @@ body{
 	font-family: 'Poppins', sans-serif;
 	color: white;
 	position: absolute;
-	transform: translate(0px, -450px);
-	text-shadow: 2px 2px 100px black;
+	transform: translate(0px, -480px);
+	text-shadow: 2px 2px 50px black;
 }
-.banner-arrow{
-	transform: rotate(270deg) scale(2,3);
-	text-shadow: 2px 2px 100px black;
-}
+
 .dropdown{
+	position: relative;
 	display: flex;
 	justify-content: center;
+	transform:translate(0px,-100px);
 }
 .dropbtn{
 	cursor: pointer;
@@ -51,4 +51,58 @@ body{
 	font-size: 40px;
 	background-color: transparent;
 	border: none;
+	font-weight: bold;
+	color: white;
+	text-shadow: 2px 2px 50px black;
+}
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--primary-color);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content{
+	animation: fadeEffect 0.33s;
+}
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+	animation: shadowFade .6s;
+}
+@keyframes shadowFade {
+	from {text-shadow: 0px 0px 0px black;}
+	to {text-shadow: 2px 2px 25px black;}
+}
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+.body-text{
+	padding: 0px 200px;
+}
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border-top: none;
+	position: relative;
+	text-align: center;
+	font-size: 160%;
+	transform: translate(0px,-40px);
+}
+
+.tabcontent {
+  animation: fadeEffect 1s; /* Fading effect takes 1 second */
 }

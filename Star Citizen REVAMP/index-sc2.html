@@ -11,12 +11,24 @@
 <body>
 <div class="banner-outer"><div class="banner"></div></div>
 <div class="banner-text">
-	<h1 class="homeHeader" style="font-size: 500%;">HOME&nbsp;</h1> 
+	<h1 class="homeHeader" style="font-size: 500%;">HOME</h1> 
 	<!--Change Padding to match picture when done-->	
-  <p class="homeText" style="padding-left: 25%; padding-right: 25%;">Lorem ipsum dolor sit amet, tamquam complectitur vim at. At blandit molestie dignissim his. His velit iuvaret at. Eruditi accusata te quo, te iudico meliore tincidunt sit. Est et vitae legimus vivendo. Mea ipsum movet oporteat eu. In vim animal feugait sententiae, an vis tale dicunt consetetur.</p>
+  <p class="homeText" style="padding-left: 25%; padding-right: 25%;">Hi there! This page is always under construction, and many things are very much work in progress. I am using this site as my test bed to learn web design and web coding, so it will constantly evolve with my skills in both areas. With that said, feel free to explore!</p>
 </div>
 <div class="dropdown">
-		<button class="dropbtn" onclick="dropdown">nut</button>
+	<button class="dropbtn" onclick="dropdown()">PAGES</button>
+	<div id="myDropdown" class="dropdown-content">
+		<a href="#home" class="tablinks" onclick="openPage(event, 'about')">ABOUT</a>
+		<a href="#videos" class="tablinks" onclick="openPage(event, 'videos')">VIDEOS</a>
+	</div>
+	</div>
+	<div id="about" class="tabcontent">
+		<h1 class="body-header">ABOUT</h1>
+		<p class="body-text">I am a student who enjoys computers, so much so that I am pursuing a career in writing code for them. My skills range far outside of just that, however; in fact, coding is my least matured skill. I am much more proficient in video and photo editing, along with playing a multitude of video games, and I create videos for both education as well as entertainment, although due to the comedic nature of the entertainment oriented videos, they will be placed on a separate page.</p>
+	</div>
+	<div id="videos" class="tabcontent">
+		<h1 class="body-header">VIDEOS</h1>
+		<p class="body-text">This page is a Work-in-Progress. Check back later to see what I've done with the place!</p>
 	</div>
 </body>
 	<script src="dropdown.js"></script>
