@@ -28,7 +28,6 @@ body{
 	background-repeat: no-repeat;
 	background-position: center;
 	filter: blur(4px);
-	transform: scale(1.1);
 }
 .banner-text {
 	text-align: center;
@@ -41,4 +40,15 @@ body{
 .banner-arrow{
 	transform: rotate(270deg) scale(2,3);
 	text-shadow: 2px 2px 100px black;
+}
+.dropdown{
+	display: flex;
+	justify-content: center;
+}
+.dropbtn{
+	cursor: pointer;
+	text-align: center;
+	font-size: 40px;
+	background-color: transparent;
+	border: none;
 }
