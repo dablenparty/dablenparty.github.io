@@ -8,11 +8,12 @@
 	font-family: 'Poppins', sans-serif;
 }
 
-[data-theme="dark"]{
+/*[data-theme="dark"]{
 	--primary-color: #3b3b3b;
 	--secondary-color: white;
 	--font-color: white;
-}
+	--background-color: black;
+}*/
 body{
 	background-color: var(--background-color);
 }
@@ -36,9 +37,11 @@ body{
 	color: white;
 	position: absolute;
 	transform: translate(0px, -480px);
-	text-shadow: 2px 2px 50px black;
+	text-shadow: 2px 2px 75px black;
 }
-
+.homeText{
+	text-shadow: 2px 2px 20px black;
+}
 .dropdown{
 	position: relative;
 	display: flex;
@@ -63,6 +66,7 @@ body{
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
+  color: var(--font-color);
 }
 .dropdown-content{
 	animation: fadeEffect 0.33s;
