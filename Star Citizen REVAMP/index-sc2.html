@@ -2,25 +2,22 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>index_sc2</title>
+	<title>dablenparty</title>
 	<link rel="stylesheet" href="style2.css" media="screen">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:500&display=swap" rel="stylesheet">
-	<title>Home</title>
-	<style type="text/css">
-	</style>
 </head>
 <body>
 <input style="display: none;" type="checkbox" id="modeToggle" onclick="modeFunc()"> <!-- Blank Checkbox for stylesheet-->
 <div class="banner-outer"><div class="banner"></div>
 	<div class="banner-text">
-		<h1 class="homeHeader" id="defaultOpen" style="font-size: 500%;" onClick="openPage(event, 'home')">HOME</h1> 
+		<h1 class="homeHeader" id="defaultOpen" style="font-size: 500%;" onClick="openPage('Home', 'home')" href="#home">HOME</h1> 
 	  <p class="homeText" style="padding-left: 25%; padding-right: 25%;">Hi there! This page is always under construction, and many things are very much work in progress. I am using this site as my test bed to learn web design and web coding, so it will constantly evolve with my skills in both areas. With that said, feel free to explore! (one more note, there currently is no Dark Mode for this page.)</p>
 		<br>
 		<div class="nav-bar">
-			<a href="#personal" class="tablinks" onclick="openPage(event, 'personal')">PERSONAL PROJECTS</a>
-			<a href="#videos" class="tablinks" onclick="openPage(event, 'videos')">VIDEOS</a>
-		  <a href="#apps" class="tablinks" onClick="openPage(event, 'apps')">APPS PAGE</a>
-			<a href="#about" class="tablinks" onclick="openPage(event, 'about')">ABOUT</a>
+			<a href="#personal" class="tablinks" onclick="openPage('Personal Projects', 'personal')">PERSONAL PROJECTS</a>
+			<a href="#videos" class="tablinks" onclick="openPage('Videos', 'videos')">VIDEOS</a>
+		  <a href="#apps" class="tablinks" onClick="openPage('Apps Page', 'apps')">APPS PAGE</a>
+			<a href="#about" class="tablinks" onclick="openPage('About', 'about')">ABOUT</a>
 		</div>
 	</div>
 	</div>

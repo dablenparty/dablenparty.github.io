@@ -56,6 +56,11 @@ body{
 	font-size: 140%;
 	text-shadow: 1px 1px 25px black;
 	padding: 20px;
+	animation: scaleDown 0.5s;
+}
+.nav-bar a:hover{
+	animation: scaleUp 0.5s;
+	animation-fill-mode: forwards;
 }
 .body-text{
 	padding: 0px 200px 60px;
@@ -73,7 +78,6 @@ body{
 .tabcontent {
   animation: fadeIn 1s; /* Fading effect takes 1 second */
 }
-
 .grid-container{
 	display: inline-grid;
 	grid-gap: 130px 260px;
@@ -154,6 +158,15 @@ body{
 	to{opacity: 0;}
 }
 
+@keyframes scaleUp{
+	from {font-size: 140%}
+	to {font-size: 150%}
+}
+
+@keyframes scaleDown{
+	0% {font-size: 150%}
+	100% {font-size: 140%}
+}
 @media (max-width : 1228px ){
 	/*Move the dropdown to a menu bar*/
 }

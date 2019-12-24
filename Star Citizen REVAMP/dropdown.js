@@ -1,4 +1,4 @@
-function openPage(evt, page) {
+function openPage(name, page) {
     // Declare all variables
     var i, tabcontent, tablinks;
   
@@ -16,7 +16,7 @@ function openPage(evt, page) {
   
     // Show the current tab, and add an "active" class to the button that opened the tab
     document.getElementById(page).style.display = "block";
-    evt.currentTarget.className += " active";
+    name.currentTarget.className += " active";
   }
 //Get element with defaultOpen id, and clicks it
 document.getElementById("defaultOpen").click();
