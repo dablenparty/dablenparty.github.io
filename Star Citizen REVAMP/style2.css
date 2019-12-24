@@ -29,6 +29,7 @@ body{
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
+	filter: blur(4px);
 }
 .banner-text {
 	text-align: center;
@@ -36,6 +37,7 @@ body{
 	color: white;
 	position: absolute;
 	text-shadow: 2px 2px 75px black;
+	transform: translate(0px,-480px);
 }
 .homeText{
 	text-shadow: 2px 2px 20px black;
