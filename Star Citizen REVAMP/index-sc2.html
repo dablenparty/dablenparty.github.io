@@ -5,6 +5,7 @@
 <title>index_sc2</title>
 	<link rel="stylesheet" href="style2.css" media="screen">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:500&display=swap" rel="stylesheet">
+	<title>Home</title>
 	<style type="text/css">
 	</style>
 </head>
@@ -12,30 +13,48 @@
 <input style="display: none;" type="checkbox" id="modeToggle" onclick="modeFunc()"> <!-- Blank Checkbox for stylesheet-->
 <div class="banner-outer"><div class="banner"></div>
 	<div class="banner-text">
-		<h1 class="homeHeader" style="font-size: 500%;">HOME</h1> 
-		<!--Change Padding to match picture when done-->	
-	  <p class="homeText" style="padding-left: 25%; padding-right: 25%;">Hi there! This page is always under construction, and many things are very much work in progress. I am using this site as my test bed to learn web design and web coding, so it will constantly evolve with my skills in both areas. With that said, feel free to explore! (one more note, there currently is no Dark Mode for this page. Working on it!)</p>
-	  <div class="dropdown">
-		<button class="dropbtn" onclick="dropdown()">PAGES</button>
-		<div id="myDropdown" class="dropdown-content">
+		<h1 class="homeHeader" id="defaultOpen" style="font-size: 500%;" onClick="openPage(event, 'home')">HOME</h1> 
+	  <p class="homeText" style="padding-left: 25%; padding-right: 25%;">Hi there! This page is always under construction, and many things are very much work in progress. I am using this site as my test bed to learn web design and web coding, so it will constantly evolve with my skills in both areas. With that said, feel free to explore! (one more note, there currently is no Dark Mode for this page.)</p>
+		<br>
+		<div class="nav-bar">
 			<a href="#personal" class="tablinks" onclick="openPage(event, 'personal')">PERSONAL PROJECTS</a>
 			<a href="#videos" class="tablinks" onclick="openPage(event, 'videos')">VIDEOS</a>
-			<a href="#home" class="tablinks" onclick="openPage(event, 'about')">ABOUT</a>
+		  <a href="#apps" class="tablinks" onClick="openPage(event, 'apps')">APPS PAGE</a>
+			<a href="#about" class="tablinks" onclick="openPage(event, 'about')">ABOUT</a>
 		</div>
 	</div>
 	</div>
+	<div id="home" class="tabcontent">
+		<h1 class="body-header">WELCOME!</h1>
+		<p class="body-text">Use the Navigation Bar above to find what you're looking for. Search functionality will come later.</p>
 	</div>
-	<div id="about" class="tabcontent">
-		<h1 class="body-header">ABOUT</h1>
-		<p class="body-text">I am a student who enjoys computers, so much so that I am pursuing a career in writing code for them. My skills range far outside of just that, however; in fact, coding is my least matured skill. I am much more proficient in video and photo editing, along with playing a multitude of video games, and I create videos for both education as well as entertainment, although due to the comedic nature of the entertainment oriented videos, they will be placed on a separate page.</p>
+	<div id="personal" class="tabcontent">
+		<h1 class="body-header">PERSONAL PROJECTS</h1>
+		<p class="body-text">This is where my personal ventures can be found. I teach myself various concepts (in a variety of topics) to both help me in my classes and improve my problem solving skills. This is more for my accessibility, but feel free to learn from them as I did. Some articles will also have an accompanying video.</p>
 	</div>
 	<div id="videos" class="tabcontent">
 		<h1 class="body-header">VIDEOS</h1>
 		<p class="body-text">This page is a Work-in-Progress. Check back later to see what I've done with the place!</p>
 	</div>
-	<div id="personal" class="tabcontent">
-		<h1 class="body-header">PERSONAL PROJECTS</h1>
-		<p class="body-text">This is where my personal ventures can be found. I teach myself various concenpts (in a variety of topics) to both help me in my classes and improve my problem solving skills. This is more for my accessibility, but feel free to learn from them as I did. Some articles will also have an accompanying video.</p>
+	<div id="apps" class="tabcontent">
+		<h1 class="body-header">APPS PAGE</h1>
+		<p class="body-text">I am constantly having to reset my home PC, and use multiple computers anyways, so this page is an easy-access collection of my necessary apps and programs. It is also sorted alphabetically.</p>
+		<div class="grid-container">
+			<div class="grid-item-apps"><a href="https://discordapp.com/" target="_blank" class="grid-link"><img class="grid-pic" src="imgs/discord.png" alt="discord.png"><h2 class="grid-name">DISCORD</h2></a></div>
+			<div class="grid-item-apps"><a href="https://www.escapefromtarkov.com/" target="_blank"><img class="grid-pic" src="imgs/tarkov.jpg" alt="tarkov.jpg"><h2 class="grid-name-long">ESCAPE FROM TARKOV</h2></a></div>
+			<div class="grid-item-apps"><a href="https://desktop.github.com/" target="_blank"><img class="grid-pic" src="imgs/github-desktop.png" alt="github-mac.png"><h2 class="grid-name">GITUHB DESKTOP</h2></a></div>
+			<div class="grid-item-apps"><a href="https://obsproject.com/" target="_blank"><img class="grid-pic" src="obs.jpg" alt="obs.jpg"><h2 class="grid-name">OBS STUDIO</h2></a></div>
+			<div class="grid-item-apps"><a href="https://socialclub.rockstargames.com/rockstar-games-launcher" target="_blank"><img class="grid-pic" src="imgs/rockstar-launcher.png" alt="rockstar-launcher.png"><h2 id="rockstar" class="grid-name-long">ROCKSTAR LAUNCHER</h2></a></div>
+			<div class="grid-item-apps"><a href="https://www.spotify.com/us/download/" target="_blank"><img class="grid-pic" src="imgs/spotify.png" alt="spotify.png"><h2 class="grid-name">SPOTIFY</h2></a></div>
+			<div class="grid-item-apps"><a href="https://robertsspaceindustries.com/" target="_blank"><img class="grid-pic" src="imgs/star-citizen.jpg" alt="star-citizen.jpg"><h2 class="grid-name">STAR CITIZEN</h2></a></div>
+			<div class="grid-item-apps"><a href="https://store.steampowered.com/about/" target="_blank"><img class="grid-pic" src="imgs/steam.jpg" alt="steam.jpg"><h2 class="grid-name">STEAM</h2></a></div>
+			<div class="grid-item-apps"><a href="https://www.vb-audio.com/Voicemeeter/potato.htm" target="_blank"><img class="grid-pic" src="imgs/voicemeeter.jpg" alt="voicemeeter.jpg"><h2 class="grid-name-long">VOICEMEETER POTATO</h2></a></div>
+			<div class="grid-item-apps"><a href="https://code.visualstudio.com/" target="_blank"><img class="grid-pic" src="imgs/vs-code.png" alt="vs-code.png"><h2 class="grid-name">VS CODE</h2></a></div>
+		</div>
+	</div>
+	<div id="about" class="tabcontent">
+		<h1 class="body-header">ABOUT</h1>
+		<p class="body-text">I am a student who enjoys computers, so much so that I am pursuing a career in writing code for them. My skills range far outside of just that, however; in fact, coding is my least matured skill. I am much more proficient in video and photo editing, along with playing a multitude of video games, and I create videos for both education as well as entertainment, although due to the comedic nature of the entertainment oriented videos, they will be placed on a separate page.</p>
 	</div>
 </body>
 	<script src="dropdown.js"></script>
