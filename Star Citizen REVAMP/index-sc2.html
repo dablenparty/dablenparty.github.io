@@ -10,19 +10,21 @@
 </head>
 <body>
 <input style="display: none;" type="checkbox" id="modeToggle" onclick="modeFunc()"> <!-- Blank Checkbox for stylesheet-->
-<div class="banner-outer"><div class="banner"></div></div>
-<div class="banner-text">
-	<h1 class="homeHeader" style="font-size: 500%;">HOME</h1> 
-	<!--Change Padding to match picture when done-->	
-  <p class="homeText" style="padding-left: 25%; padding-right: 25%;">Hi there! This page is always under construction, and many things are very much work in progress. I am using this site as my test bed to learn web design and web coding, so it will constantly evolve with my skills in both areas. With that said, feel free to explore! (one more note, there currently is no Dark Mode for this page. Working on it!)</p>
-</div>
-<div class="dropdown">
-	<button class="dropbtn" onclick="dropdown()">PAGES</button>
-	<div id="myDropdown" class="dropdown-content">
-		<a href="#home" class="tablinks" onclick="openPage(event, 'about')">ABOUT</a>
-		<a href="#videos" class="tablinks" onclick="openPage(event, 'videos')">VIDEOS</a>
+<div class="banner-outer"><div class="banner">
+	<div class="banner-text">
+		<h1 class="homeHeader" style="font-size: 500%;">HOME</h1> 
+		<!--Change Padding to match picture when done-->	
+	  <p class="homeText" style="padding-left: 25%; padding-right: 25%;">Hi there! This page is always under construction, and many things are very much work in progress. I am using this site as my test bed to learn web design and web coding, so it will constantly evolve with my skills in both areas. With that said, feel free to explore! (one more note, there currently is no Dark Mode for this page. Working on it!)</p>
+	  <div class="dropdown">
+		<button class="dropbtn" onclick="dropdown()">PAGES</button>
+		<div id="myDropdown" class="dropdown-content">
+			<a href="#personal" class="tablinks" onclick="openPage(event, 'personal')">PERSONAL PROJECTS</a>
+			<a href="#videos" class="tablinks" onclick="openPage(event, 'videos')">VIDEOS</a>
+			<a href="#home" class="tablinks" onclick="openPage(event, 'about')">ABOUT</a>
+		</div>
 	</div>
 	</div>
+</div></div>
 	<div id="about" class="tabcontent">
 		<h1 class="body-header">ABOUT</h1>
 		<p class="body-text">I am a student who enjoys computers, so much so that I am pursuing a career in writing code for them. My skills range far outside of just that, however; in fact, coding is my least matured skill. I am much more proficient in video and photo editing, along with playing a multitude of video games, and I create videos for both education as well as entertainment, although due to the comedic nature of the entertainment oriented videos, they will be placed on a separate page.</p>
@@ -30,6 +32,10 @@
 	<div id="videos" class="tabcontent">
 		<h1 class="body-header">VIDEOS</h1>
 		<p class="body-text">This page is a Work-in-Progress. Check back later to see what I've done with the place!</p>
+	</div>
+	<div id="personal" class="tabcontent">
+		<h1 class="body-header">PERSONAL PROJECTS</h1>
+		<p class="body-text">This is where my personal ventures can be found. I teach myself various concenpts (in a variety of topics) to both help me in my classes and improve my problem solving skills. This is more for my accessibility, but feel free to learn from them as I did. Some articles will also have an accompanying video.</p>
 	</div>
 </body>
 	<script src="dropdown.js"></script>
