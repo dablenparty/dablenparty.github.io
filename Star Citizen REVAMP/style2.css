@@ -9,14 +9,16 @@ html{
 	--font-color: black;
 	--background-color: #fff8ee;
 	font-family: 'Poppins', sans-serif;
+	--banner-image: url("imgs/beauty.png")
 }
 
-/*[data-theme="dark"]{
+[data-theme="dark"]{
 	--primary-color: #3b3b3b;
 	--secondary-color: white;
 	--font-color: white;
-	--background-color: black;
-}*/
+	--background-color: #151515;
+	--banner-image: url("imgs/gladius.png")
+}
 body{
 	background-color: var(--background-color);
 }
@@ -26,7 +28,7 @@ body{
 	overflow: hidden;
 }
 .banner {
-	background-image: url("beauty.png");
+	background-image: var(--banner-image);
 	height: 500px;
 	background-attachment: fixed;
 	background-size: cover;
@@ -49,6 +51,81 @@ body{
 	text-shadow: 2px 2px 20px black;
 	cursor: default;
 }
+
+#settings-button{
+	background: transparent;
+	border: none;
+	font: inherit;
+	font-size: 133%;
+	font-weight: bold;
+	color: var(--font-color);
+	cursor: pointer;
+}
+/* The Modal (background) */
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: var(--background-color); /* Black w/ opacity */
+	animation: modalBG 0.5s;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+	background-color: var(--background-color);
+	margin: 15% auto; /* 15% from the top and centered */
+	padding: 20px;
+	width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+  }
+  /* Modal Header */
+.modal-header {
+  padding: 2px 16px;
+  background-color: var(--background-color);
+  color: var(--font-color);
+}
+
+/* Modal Body */
+.modal-body {padding: 2px 16px;}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: var(--background-color);
+  margin: auto;
+  padding: 0;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@keyframes animatetop {
+  from {top: -300px; opacity: 0}
+  to {top: 0; opacity: 1}
+}
+
 .nav-bar a{
 	text-decoration: none;
 	color: white;
@@ -58,6 +135,7 @@ body{
 	padding: 20px;
 	animation: scaleDown 0.5s;
 }
+
 .nav-bar a:hover{
 	animation: scaleUp 0.5s;
 	animation-fill-mode: forwards;
@@ -65,6 +143,7 @@ body{
 .body-text{
 	padding: 0px 200px 60px;
 }
+
 /* Style the tab content */
 .tabcontent {
   display: none;
@@ -73,6 +152,7 @@ body{
 	position: relative;
 	text-align: center;
 	font-size: 160%;
+	color: var(--font-color);
 }
 
 .tabcontent {
@@ -131,6 +211,69 @@ body{
 	animation-fill-mode: forwards;
 }
 
+/* The switch - the box around the slider */
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	-webkit-transition: .4s;
+	transition: .4s;
+  }
+  
+  .slider:before {
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	-webkit-transition: .4s;
+	transition: .4s;
+  }
+  
+  input:checked + .slider {
+	background-color: #484848;
+  }
+  
+  input:focus + .slider {
+	box-shadow: 0 0 1px #484848;
+  }
+  
+  input:checked + .slider:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+	border-radius: 34px;
+  }
+  
+  .slider.round:before {
+	border-radius: 50%;
+  }
+
 /* Keyframes Section */
 
 @keyframes fadeIn {
@@ -167,6 +310,12 @@ body{
 	0% {font-size: 150%}
 	100% {font-size: 140%}
 }
+
+@keyframes modalBG{
+	from {background-color: transparent;}
+	to {background-color: var(--background-color);}
+}
+
 @media (max-width : 1228px ){
 	/*Move the dropdown to a menu bar*/
 }

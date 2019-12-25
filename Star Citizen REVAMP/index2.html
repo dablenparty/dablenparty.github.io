@@ -7,10 +7,9 @@
 	<link href="https://fonts.googleapis.com/css?family=Poppins:500&display=swap" rel="stylesheet">
 </head>
 <body>
-<input style="display: none;" type="checkbox" id="modeToggle" onclick="modeFunc()"> <!-- Blank Checkbox for stylesheet-->
 <div class="banner-outer"><div class="banner"></div>
 	<div class="banner-text">
-		<h1 class="homeHeader" id="defaultOpen" style="font-size: 500%;" onClick="openPage('Home', 'home')" href="#home">HOME</h1> 
+		<h1 class="homeHeader" id="defaultOpen" style="font-size: 500%;" onClick="openPage('Home', 'home')">HOME</h1> 
 	  <p class="homeText" style="padding-left: 25%; padding-right: 25%;">Hi there! This page is always under construction, and many things are very much work in progress. I am using this site as my test bed to learn web design and web coding, so it will constantly evolve with my skills in both areas. With that said, feel free to explore! (one more note, there currently is no Dark Mode for this page.)</p>
 		<br>
 		<div class="nav-bar">
@@ -24,10 +23,29 @@
 	<div id="home" class="tabcontent">
 		<h1 class="body-header">WELCOME!</h1>
 		<p class="body-text">Use the Navigation Bar above to find what you're looking for. Search functionality will come later.</p>
+		<button id="settings-button">SETTINGS</button>
+		<div id="settings-menu" class="modal">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h2>SETTINGS</h2>
+				</div>
+				<div class="modal-body">
+					<span class="close">&times;</span>
+					<p>DARK MODE</p>
+					<label class="switch">
+						<input type="checkbox" id="modeToggle" onclick="modeFunc()">
+						<span class="slider round"></span>
+					</label>
+				</div>
+			</div>
+		</div>
 	</div>
 	<div id="personal" class="tabcontent">
 		<h1 class="body-header">PERSONAL PROJECTS</h1>
-		<p class="body-text">This is where my personal ventures can be found. I teach myself various concepts (in a variety of topics) to both help me in my classes and improve my problem solving skills. This is more for my accessibility, but feel free to learn from them as I did. Some articles will also have an accompanying video.</p>
+		<p class="body-text">This is where my personal ventures can be found. I teach myself various concepts (in a variety of topics) to both help me in my classes and improve my problem solving skills. This is more for my accessibility, but feel free to learn from them as I did. Some are videos, while others are articles with accompanying pictures.</p>
+		<div>
+
+		</div>
 	</div>
 	<div id="videos" class="tabcontent">
 		<h1 class="body-header">VIDEOS</h1>
@@ -51,7 +69,7 @@
 	</div>
 	<div id="about" class="tabcontent">
 		<h1 class="body-header">ABOUT</h1>
-		<p class="body-text">I am a student who enjoys computers, so much so that I am pursuing a career in writing code for them. My skills range far outside of just that, however; in fact, coding is my least matured skill. I am much more proficient in video and photo editing, along with playing a multitude of video games, and I create videos for both education as well as entertainment, although due to the comedic nature of the entertainment oriented videos, they will be placed on a separate page.</p>
+		<p class="body-text">I am a student who enjoys computers, so much so that I am pursuing a career in writing code for them. My skills range far outside of just that, however; in fact, coding is my least matured skill. I am much more proficient in video and photo editing, and also play a multitude of video games. I also create videos for education as well, usually revolving around phyics and mathematics.</p>
 	</div>
 </body>
 	<script src="dropdown.js"></script>
