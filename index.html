@@ -1,44 +1,97 @@
-<!-- This is the hub for everything you'll do in coding. Accesses all of yours project files, sites, etc. -->
-<!-- It can be found here: https://dablenparty.github.io/ -->
 <!doctype html>
-<html lang="en-US">
-    <head>
-        <link rel="stylesheet" href="style.css" media="screen" /> <!-- Links to the stylesheet in the repository -->
-        <title>Coding Hub</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-    </head>
-        <body>
-            <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
-            <div class="header">
-                <h1>Coding Hub</h1>
-                Dark Mode: <input type="checkbox" id="modeToggle" onclick="modeFunc()"> <!-- Checkbox to enable/disable Dark Mode -->
-                <p>This is where you can easily access anything regarding your coding adventure.</p>
-				<p style="font-size: 133%"><a href="apps_index.html">App Page</a></p><!-- Delete this once you've got the new phone -->
-            </div>
-            <hr>
-            <div class="github-box"> <!-- Repository links -->
-                <h2>GitHub Resources (<a id="githubHome" title="GitHub Homepage" href="https://github.com/" target="_blank">Homepage</a>)</h2>
-                <p title="Repository for this page"><a href="https://github.com/dablenparty/dablenparty.github.io" target="_blank">Coding Hub Repository</a></p>
-                <p title="Python repository"><a href="https://github.com/dablenparty/python" target="_blank">Python</a></p>
-            </div>
-            <hr>
-            <div class="learning-box"> <!-- Links to my most common learning resources -->
-                <h2>Learning Sources</h2>
-                <p title="HTML Online Textbook"><a href="https://www.w3schools.com/html/default.asp" target="_blank">W3 Schools HTML</a></p>
-                <p title="JavaScript Online Textbook"><a href="https://www.w3schools.com/js/default.asp" target="_blank">W3 Schools JavaScript</a> </p>
-                <p title="JavaScript Video"><a href="https://youtu.be/PkZNo7MFNFg?t=3959" target="_blank">FreeCodeCamp Beginner JavaScript Course</a></p>
-                <p title="Python Online Textbook"><a href="https://automatetheboringstuff.com" target="_blank">Automate the Boring Stuff with Python</a> </p>
-            </div>
-            <hr>
-            <div class="links-box">
-                <h2>Useful Links</h2>
-                <a href="https://fonts.google.com" target="_blank">
-                    <img id="fontsLogo" src="https://www.gstatic.com/images/icons/material/apps/fonts/1x/opengraph_color_1200dp.png" alt="Google Fonts Logo"> <!-- Instead of text, this image is placed as the link -->
-                </a>
-                <p><a href="checklist.html#home">Star Citizen Project Checklist</a></p>
-				<a href="Star Citizen REVAMP/index2.html">REVAMP Page</a>
-            </div>
-        </body>
-        <script src="dark-mode.js"> //JavaScript for the Dark Mode checkbox
-        </script>
+<html>
+<head>
+<meta charset="UTF-8">
+	<title>dablenparty</title>
+	<link rel="stylesheet" href="style2.css" media="screen">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:500&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="banner-outer"><div class="banner"></div>
+	<div class="banner-text">
+		<h1 class="homeHeader" id="defaultOpen" style="font-size: 500%;" onClick="openPage('Home', 'home')">HOME</h1> 
+	  <p class="homeText" style="padding-left: 25%; padding-right: 25%;">Hi there! This page is always under construction, and many things are very much work in progress. I am using this site as my test bed to learn web design and web coding, so it will constantly evolve with my skills in both areas. With that said, feel free to explore! (one more note, there currently is no Dark Mode for this page.)</p>
+		<br>
+		<div class="nav-bar">
+			<a href="#personal" class="tablinks" onclick="openPage('Personal Projects', 'personal')">PERSONAL PROJECTS</a>
+			<a href="#videos" class="tablinks" onclick="openPage('Videos', 'videos')">VIDEOS</a>
+		  <a href="#apps" class="tablinks" onClick="openPage('Apps Page', 'apps')">APPS PAGE</a>
+			<a href="#about" class="tablinks" onclick="openPage('About', 'about')">ABOUT</a>
+		</div>
+	</div>
+	</div>
+	<div id="home" class="tabcontent">
+		<h1 class="body-header">WELCOME!</h1>
+		<p class="body-text">Use the Navigation Bar above to find what you're looking for. Search functionality will come later.</p>
+		<button id="settings-button">SETTINGS</button>
+		<div id="settings-menu" class="modal">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h2>SETTINGS</h2>
+				</div>
+				<div class="modal-body">
+					<span class="close">&times;</span>
+					<p>DARK MODE</p>
+					<label class="switch">
+						<input type="checkbox" id="modeToggle" onclick="modeFunc()">
+						<span class="slider round"></span>
+					</label>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="personal" class="tabcontent">
+		<h1 class="body-header">PERSONAL PROJECTS</h1>
+		<p class="body-text">This is where my personal ventures can be found. I teach myself various concepts (in a variety of topics) to both help me in my classes and improve my problem solving skills. This is more for my accessibility, but feel free to learn from them as I did. Some are videos, while others are articles with accompanying pictures.</p>
+		<div>
+
+		</div>
+	</div>
+	<div id="videos" class="tabcontent">
+		<h1 class="body-header">VIDEOS</h1>
+		<p class="body-text">This page is a Work-in-Progress. Check back later to see what I've done with the place!</p>
+	</div>
+	<div id="apps" class="tabcontent">
+		<h1 class="body-header">APPS PAGE</h1>
+		<p class="body-text">I am constantly having to reset my home PC, and use multiple computers anyways, so this page is an easy-access collection of my necessary apps and programs. It is also sorted alphabetically.</p>
+		<div class="grid-container">
+			<div class="grid-item-apps"><a href="https://discordapp.com/" target="_blank" class="grid-link"><img class="grid-pic" src="imgs/discord.png" alt="discord.png"><h2 class="grid-name">DISCORD</h2></a></div>
+			<div class="grid-item-apps"><a href="https://www.escapefromtarkov.com/" target="_blank"><img class="grid-pic" src="imgs/tarkov.jpg" alt="tarkov.jpg"><h2 class="grid-name-long">ESCAPE FROM TARKOV</h2></a></div>
+			<div class="grid-item-apps"><a href="https://desktop.github.com/" target="_blank"><img class="grid-pic" src="imgs/github-desktop.png" alt="github-mac.png"><h2 class="grid-name">GITUHB DESKTOP</h2></a></div>
+			<div class="grid-item-apps"><a href="https://obsproject.com/" target="_blank"><img class="grid-pic" src="obs.jpg" alt="obs.jpg"><h2 class="grid-name">OBS STUDIO</h2></a></div>
+			<div class="grid-item-apps"><a href="https://socialclub.rockstargames.com/rockstar-games-launcher" target="_blank"><img class="grid-pic" src="imgs/rockstar-launcher.png" alt="rockstar-launcher.png"><h2 id="rockstar" class="grid-name-long">ROCKSTAR LAUNCHER</h2></a></div>
+			<div class="grid-item-apps"><a href="https://www.spotify.com/us/download/" target="_blank"><img class="grid-pic" src="imgs/spotify.png" alt="spotify.png"><h2 class="grid-name">SPOTIFY</h2></a></div>
+			<div class="grid-item-apps"><a href="https://robertsspaceindustries.com/" target="_blank"><img class="grid-pic" src="imgs/star-citizen.jpg" alt="star-citizen.jpg"><h2 class="grid-name">STAR CITIZEN</h2></a></div>
+			<div class="grid-item-apps"><a href="https://store.steampowered.com/about/" target="_blank"><img class="grid-pic" src="imgs/steam.jpg" alt="steam.jpg"><h2 class="grid-name">STEAM</h2></a></div>
+			<div class="grid-item-apps"><a href="https://code.visualstudio.com/" target="_blank"><img class="grid-pic" src="imgs/vs-code.png" alt="vs-code.png"><h2 class="grid-name">VS CODE</h2></a></div>
+		</div>
+	</div>
+	<div id="about" class="tabcontent">
+		<h1 class="body-header">ABOUT</h1>
+		<p class="body-text">I am a student who enjoys computers, so much so that I am pursuing a career in writing code for them. My skills range far outside of just that, however; in fact, coding is my least matured skill. I am much more proficient in video and photo editing, and also play a multitude of video games. I also create videos for education as well, usually revolving around phyics and mathematics.</p>
+	</div>
+</body>
+	<script src="dropdown.js"></script>
+	<script>const checkBox = document.getElementById('modeToggle');
+		//Defining the function listed under the "onclick" parameter in the checkbox 
+		function modeFunc() {
+			if (checkBox.checked == true) {
+				document.documentElement.setAttribute('data-theme','dark'); //Checks if the checkbox is checked, and if so, sets the attribute titled "data-theme" (defined in style.css) to "dark"
+				localStorage.setItem('theme','dark'); //Stores the attribute in the line above in the browsers local storage under the title "theme" so that it remembers the users option
+			} 
+			else {
+				document.documentElement.setAttribute('data-theme','light');
+				localStorage.setItem('theme','light');
+			}
+		}
+		checkBox.addEventListener('change', modeFunc, false) //Adds an event listener to the function "modeFunc()"
+		const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null; //Sets the variable "currentTheme" to whatever is stored in "theme" for a returning user
+		
+		if (currentTheme) {
+			document.documentElement.setAttribute('data-theme', currentTheme); //Sets the theme to whatever "currentTheme" is
+		
+			if (currentTheme === 'dark') {
+				checkBox.checked = true; //If Dark Mode is on, noted by "theme" being set to 'dark', then it checks the checkbox for consistency
+			}
+		}</script>
 </html>

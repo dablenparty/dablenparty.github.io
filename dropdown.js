@@ -1,4 +1,4 @@
-function openDrop(evt, height) {
+function openPage(name, page) {
     // Declare all variables
     var i, tabcontent, tablinks;
   
@@ -15,6 +15,34 @@ function openDrop(evt, height) {
     }
   
     // Show the current tab, and add an "active" class to the button that opened the tab
-    document.getElementById(height).style.display = "block";
-    evt.currentTarget.className += " active";
+    document.getElementById(page).style.display = "block";
+    name.currentTarget.className += " active";
   }
+//Get element with defaultOpen id, and clicks it
+document.getElementById("defaultOpen").click();
+
+// Get the modal
+var modal = document.getElementById("settings-menu");
+
+// Get the button that opens the modal
+var btn = document.getElementById("settings-button");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
