@@ -1,3 +1,3 @@
 # This is my central site
 
-Every one of my repositories are linked here, and they're all for learning purposes.
+Anything relating to me (videos, articles, etc.) can be found on this site.
