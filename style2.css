@@ -273,7 +273,26 @@ body{
   .slider.round:before {
 	border-radius: 50%;
   }
-
+.video-box{
+	padding: 10px 0px;
+	background-color: var(--primary-color);
+}
+.video-thumb{
+	width: 275px; /*also 15%*/
+	float: left;
+	padding-left: 10px;
+	padding-right: 40px;
+	cursor: pointer;
+}
+.article-link{
+	text-align: left;
+	cursor: pointer;
+	text-decoration: none;
+	color: var(--font-color);
+}
+.video-desc{
+	width: 90%;
+}
 /* Keyframes Section */
 
 @keyframes fadeIn {
