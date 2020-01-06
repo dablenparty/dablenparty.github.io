@@ -291,8 +291,8 @@ body{
 	color: var(--font-color);
 }
 .video-desc{
-	width: 90%;
-	padding-left: 10px;
+	margin-left: 324px;
+	margin-right: px;
 }
 /* Keyframes Section */
 
