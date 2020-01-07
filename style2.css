@@ -276,9 +276,13 @@ body{
 .video-box{
 	padding: 10px 0px;
 	background-color: var(--primary-color);
+	min-height: 207.47px; /*make sure to account for padding, actual height is 227.47*/
 }
 .video-thumb{
-	width: 275px; /*also 15%*/
+	display: inline-block;
+	max-width: 275px;
+	width: 100%; /*also 15%*/
+	height: auto;
 	float: left;
 	padding-left: 10px;
 	padding-right: 40px;
@@ -292,7 +296,7 @@ body{
 }
 .video-desc{
 	margin-left: 324px;
-	margin-right: px;
+	margin-right: 20px;
 }
 /* Keyframes Section */
 
