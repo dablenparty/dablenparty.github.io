@@ -46,6 +46,9 @@ body{
 }
 .homeHeader{
 	cursor: default;
+	text-decoration: none;
+	color: white;
+	font-weight: bolder;
 }
 .homeText{
 	text-shadow: 2px 2px 20px black;
