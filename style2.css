@@ -50,6 +50,7 @@ body{
 .homeText{
 	text-shadow: 2px 2px 20px black;
 	cursor: default;
+	padding: 0% 25%;
 }
 
 #settings-button{
@@ -162,9 +163,6 @@ body{
 	display: inline-grid;
 	grid-gap: 130px 260px;
 	grid-template-columns: auto auto;
-}
-.grid-link{
-	height: 1px;
 }
 .grid-pic{
 	overflow: hidden;
@@ -279,7 +277,7 @@ body{
 	min-height: 207.47px; /*make sure to account for padding, actual height is 227.47*/
 }
 .video-thumb{
-	display: inline-block;
+	display: block;
 	max-width: 275px;
 	width: 100%; /*also 15%*/
 	height: auto;
@@ -340,7 +338,36 @@ body{
 	to {background-color: var(--background-color);}
 }
 
-@media screen and (max-width : 425px ){
+@media (max-width: 760px){
+	.homeText{
+		padding: 5% 10%;
+	}
+	.banner-text{
+		font-size: 80%;
+	}
+}
+
+@media screen and (max-width: 683px){
+	.grid-container{
+		grid-gap: 0px;
+	}
+	.grid-name, .grid-name-long{
+		display: none;
+		animation: none;
+	}
+	.grid-item-apps a:hover .grid-pic{
+		animation: gridSelectOut 0.5s;
+		animation-fill-mode: forwards;
+	}
+	.grid-pic{
+		width: 100%;
+		height: auto;
+		animation: gridSelectIn 0.5s;
+		filter: blur(0px);
+	}
+	.body-text{
+		padding: 0px;
+	}
 	.video-thumb{
 		display: none;
 		padding: none;
@@ -349,7 +376,12 @@ body{
 		text-align: center;
 	}
 	.video-desc{
-		margin: 0px;
+		margin: 5px;
+		font-size: 80%;
+	}
+	.video-title{
+		font-weight: bold;
+		margin: 10px;
 	}
 }
 
