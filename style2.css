@@ -340,8 +340,17 @@ body{
 	to {background-color: var(--background-color);}
 }
 
-@media (max-width : 1228px ){
-	/*Move the dropdown to a menu bar*/
+@media screen and (max-width : 425px ){
+	.video-thumb{
+		display: none;
+		padding: none;
+	}
+	.article-link{
+		text-align: center;
+	}
+	.video-desc{
+		margin: 0px;
+	}
 }
 
 @media (max-width: 1590px){
