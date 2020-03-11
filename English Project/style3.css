@@ -1,22 +1,38 @@
 @charset "UTF-8";
-html{
+
+html {
     scroll-behavior: smooth;
     font-family: 'Muli', sans-serif;
     background-color: #0e0e0e;
     color: white;
 }
 
-.title-box{
+.title-box {
     text-align: center;
     text-emphasis: bold;
-    font-size: xx-large;
 }
 
-#wiki-ref{
-    color: gray;
+.book-title {
+    font-size: 400%;
 }
 
-.book-summary{
+.book-summary {
     padding: 0% 15%;
     font-size: large;
+}
+
+#wiki-ref {
+    color: gray;
+    opacity: 40%;
+}
+
+.book-author {
+    transform: translate(0px,-20px)
+}
+
+.title-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 39%;
 }

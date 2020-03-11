@@ -1,396 +1,493 @@
 @charset "UTF-8";
+
 /* CSS Document */
-html{
-	scroll-behavior: smooth;
+html {
+    scroll-behavior: smooth;
 }
+
 :root {
-	--primary-color: white;
-	--secondary-color: #3b3b3b;
-	--font-color: black;
-	--background-color: #fff8ee;
-	font-family: 'Poppins', sans-serif;
-	--banner-image: url("imgs/beauty.png")
+    --primary-color: white;
+    --secondary-color: #3b3b3b;
+    --font-color: black;
+    --background-color: #fff8ee;
+    font-family: 'Poppins', sans-serif;
+    --banner-image: url("imgs/beauty.png")
 }
 
-[data-theme="dark"]{
-	--primary-color: #3b3b3b;
-	--secondary-color: white;
-	--font-color: white;
-	--background-color: #151515;
-	--banner-image: url("imgs/gladius.png")
+[data-theme="dark"] {
+    --primary-color: #3b3b3b;
+    --secondary-color: white;
+    --font-color: white;
+    --background-color: #151515;
+    --banner-image: url("imgs/gladius.png")
 }
-body{
-	background-color: var(--background-color);
+
+body {
+    background-color: var(--background-color);
 }
-.banner-outer{
-	width: auto;
-	height: 500px;
-	overflow: hidden;
+
+.banner-outer {
+    width: auto;
+    height: 500px;
+    overflow: hidden;
 }
+
 .banner {
-	background-image: var(--banner-image);
-	height: 500px;
-	padding-top: 50px;
-	background-attachment: fixed;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
-	filter: blur(4px);
-}
-.banner-text {
-	text-align: center;
-	font-family: 'Poppins', sans-serif;
-	color: white;
-	position: absolute;
-	text-shadow: 2px 2px 75px black;
-	transform: translate(0px,-480px);
-}
-.homeHeader{
-	cursor: default;
-	text-decoration: none;
-	color: white;
-	font-weight: bolder;
-}
-.homeText{
-	text-shadow: 2px 2px 20px black;
-	cursor: default;
-	padding: 0% 25%;
+    background-image: var(--banner-image);
+    height: 500px;
+    padding-top: 50px;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: blur(4px);
 }
 
-#settings-button{
-	background: transparent;
-	border: none;
-	font: inherit;
-	font-size: 133%;
-	font-weight: bold;
-	color: var(--font-color);
-	cursor: pointer;
+.banner-text {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    position: absolute;
+    text-shadow: 2px 2px 75px black;
+    transform: translate(0px, -480px);
 }
+
+.homeHeader {
+    cursor: default;
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+}
+
+.homeText {
+    text-shadow: 2px 2px 20px black;
+    cursor: default;
+    padding: 0% 25%;
+}
+
+#settings-button {
+    background: transparent;
+    border: none;
+    font: inherit;
+    font-size: 133%;
+    font-weight: bold;
+    color: var(--font-color);
+    cursor: pointer;
+}
+
 /* The Modal (background) */
 .modal {
-	display: none; /* Hidden by default */
-	position: fixed; /* Stay in place */
-	z-index: 1; /* Sit on top */
-	left: 0;
-	top: 0;
-	width: 100%; /* Full width */
-	height: 100%; /* Full height */
-	overflow: auto; /* Enable scroll if needed */
-	background-color: rgb(0,0,0); /* Fallback color */
-	background-color: var(--background-color); /* Black w/ opacity */
-	animation: modalBG 0.5s;
-  }
-  
-  /* Modal Content/Box */
-  .modal-content {
-	background-color: var(--background-color);
-	margin: 15% auto; /* 15% from the top and centered */
-	padding: 20px;
-	width: 80%; /* Could be more or less, depending on screen size */
-  }
-  
-  /* The Close Button */
-  .close {
-	color: #aaa;
-	float: right;
-	font-size: 28px;
-	font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-	color: black;
-	text-decoration: none;
-	cursor: pointer;
-  }
-  /* Modal Header */
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: var(--background-color);
+    /* Black w/ opacity */
+    animation: modalBG 0.5s;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: var(--background-color);
+    margin: 15% auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    width: 80%;
+    /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Modal Header */
 .modal-header {
-  padding: 2px 16px;
-  background-color: var(--background-color);
-  color: var(--font-color);
+    padding: 2px 16px;
+    background-color: var(--background-color);
+    color: var(--font-color);
 }
 
 /* Modal Body */
-.modal-body {padding: 2px 16px;}
+.modal-body {
+    padding: 2px 16px;
+}
 
 /* Modal Content */
 .modal-content {
-  position: relative;
-  background-color: var(--background-color);
-  margin: auto;
-  padding: 0;
-  width: 80%;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-  animation-name: animatetop;
-  animation-duration: 0.4s
+    position: relative;
+    background-color: var(--background-color);
+    margin: auto;
+    padding: 0;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s
 }
 
 /* Add Animation */
 @keyframes animatetop {
-  from {top: -300px; opacity: 0}
-  to {top: 0; opacity: 1}
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
 }
 
-.nav-bar a{
-	text-decoration: none;
-	color: white;
-	font-weight: bold;
-	font-size: 140%;
-	text-shadow: 1px 1px 25px black;
-	padding: 20px;
-	animation: scaleDown 0.5s;
+.nav-bar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 140%;
+    text-shadow: 1px 1px 25px black;
+    padding: 20px;
+    animation: scaleDown 0.5s;
 }
 
-.nav-bar a:hover{
-	animation: scaleUp 0.5s;
-	animation-fill-mode: forwards;
+.nav-bar a:hover {
+    animation: scaleUp 0.5s;
+    animation-fill-mode: forwards;
 }
-.body-text{
-	padding: 0px 200px 60px;
+
+.body-text {
+    padding: 0px 200px 60px;
 }
 
 /* Style the tab content */
 .tabcontent {
-  display: none;
-  padding: 48px 12px;
-  border-top: none;
-	position: relative;
-	text-align: center;
-	font-size: 160%;
-	color: var(--font-color);
+    display: none;
+    padding: 48px 12px;
+    border-top: none;
+    position: relative;
+    text-align: center;
+    font-size: 160%;
+    color: var(--font-color);
 }
 
 .tabcontent {
-  animation: fadeIn 1s; /* Fading effect takes 1 second */
+    animation: fadeIn 1s;
+    /* Fading effect takes 1 second */
 }
-.grid-container{
-	display: inline-grid;
-	grid-gap: 130px 260px;
-	grid-template-columns: auto auto;
+
+.grid-container {
+    display: inline-grid;
+    grid-gap: 130px 260px;
+    grid-template-columns: auto auto;
 }
-.grid-pic{
-	overflow: hidden;
-	width: 640px;
-	height: 336px;
-	filter: blur(8px);
-	animation: gridSelectOut 0.5s;
+
+.grid-pic {
+    overflow: hidden;
+    width: 640px;
+    height: 336px;
+    filter: blur(8px);
+    animation: gridSelectOut 0.5s;
 }
-.grid-name{
-	color: white;
-	font-weight: bold;
-	font-size: 300%;
-	text-shadow: 2px 2px 50px black;
-	transform: translate(0px, -310px);
-	width: 640px;
-	animation: fadeIn 0.5s;
+
+.grid-name {
+    color: white;
+    font-weight: bold;
+    font-size: 300%;
+    text-shadow: 2px 2px 50px black;
+    transform: translate(0px, -310px);
+    width: 640px;
+    animation: fadeIn 0.5s;
 }
-.grid-name-long{
-	color: white;
-	font-weight: bold;
-	font-size: 300%;
-	text-shadow: 2px 2px 50px black;
-	transform: translate(0px,-360px);
-	width: 640px;
-	animation: fadeIn 0.5s;
+
+.grid-name-long {
+    color: white;
+    font-weight: bold;
+    font-size: 300%;
+    text-shadow: 2px 2px 50px black;
+    transform: translate(0px, -360px);
+    width: 640px;
+    animation: fadeIn 0.5s;
 }
-.grid-item-apps{
-	height: 336px;
-	overflow: hidden;
+
+.grid-item-apps {
+    height: 336px;
+    overflow: hidden;
 }
-.grid-item-apps a{
-	text-decoration: none;
+
+.grid-item-apps a {
+    text-decoration: none;
 }
-.grid-item-apps a:hover .grid-name{
-	animation: fadeOut 0.5s;
-	animation-fill-mode: forwards;
+
+.grid-item-apps a:hover .grid-name {
+    animation: fadeOut 0.5s;
+    animation-fill-mode: forwards;
 }
-.grid-item-apps a:hover .grid-name-long{
-	animation: fadeOut 0.5s;
-	animation-fill-mode: forwards;
+
+.grid-item-apps a:hover .grid-name-long {
+    animation: fadeOut 0.5s;
+    animation-fill-mode: forwards;
 }
-.grid-item-apps a:hover .grid-pic{
-	animation: gridSelectIn 0.5s;
-	animation-fill-mode: forwards;
+
+.grid-item-apps a:hover .grid-pic {
+    animation: gridSelectIn 0.5s;
+    animation-fill-mode: forwards;
 }
 
 /* The switch - the box around the slider */
 .switch {
-	position: relative;
-	display: inline-block;
-	width: 60px;
-	height: 34px;
-  }
-  
-  /* Hide default HTML checkbox */
-  .switch input {
-	opacity: 0;
-	width: 0;
-	height: 0;
-  }
-  
-  /* The slider */
-  .slider {
-	position: absolute;
-	cursor: pointer;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background-color: #ccc;
-	-webkit-transition: .4s;
-	transition: .4s;
-  }
-  
-  .slider:before {
-	position: absolute;
-	content: "";
-	height: 26px;
-	width: 26px;
-	left: 4px;
-	bottom: 4px;
-	background-color: white;
-	-webkit-transition: .4s;
-	transition: .4s;
-  }
-  
-  input:checked + .slider {
-	background-color: #484848;
-  }
-  
-  input:focus + .slider {
-	box-shadow: 0 0 1px #484848;
-  }
-  
-  input:checked + .slider:before {
-	-webkit-transform: translateX(26px);
-	-ms-transform: translateX(26px);
-	transform: translateX(26px);
-  }
-  
-  /* Rounded sliders */
-  .slider.round {
-	border-radius: 34px;
-  }
-  
-  .slider.round:before {
-	border-radius: 50%;
-  }
-.video-box{
-	padding: 10px 0px;
-	background-color: var(--primary-color);
-	min-height: 207.47px; /*make sure to account for padding, actual height is 227.47*/
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
 }
-.video-thumb{
-	display: block;
-	max-width: 275px;
-	width: 100%; /*also 15%*/
-	height: auto;
-	float: left;
-	padding-left: 10px;
-	padding-right: 40px;
-	cursor: pointer;
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
 }
-.article-link{
-	text-align: left;
-	cursor: pointer;
-	text-decoration: none;
-	color: var(--font-color);
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
 }
-.video-desc{
-	margin-left: 324px;
-	margin-right: 20px;
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
 }
+
+input:checked + .slider {
+    background-color: #484848;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #484848;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.video-box {
+    padding: 10px 0px;
+    background-color: var(--primary-color);
+    min-height: 207.47px;
+    /*make sure to account for padding, actual height is 227.47*/
+}
+
+.video-thumb {
+    display: block;
+    max-width: 275px;
+    width: 100%;
+    /*also 15%*/
+    height: auto;
+    float: left;
+    padding-left: 10px;
+    padding-right: 40px;
+    cursor: pointer;
+}
+
+.article-link {
+    text-align: left;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--font-color);
+}
+
+.video-desc {
+    margin-left: 324px;
+    margin-right: 20px;
+}
+
 /* Keyframes Section */
 
 @keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes shadowFade {
-	from {text-shadow: 0px 0px 0px black;}
-	to {text-shadow: 2px 2px 25px black;}
+    from {
+        text-shadow: 0px 0px 0px black;
+    }
+
+    to {
+        text-shadow: 2px 2px 25px black;
+    }
 }
 
 @keyframes gridSelectIn {
-	from{filter: blur(8px);}
-	to {filter: blur(0px);}
+    from {
+        filter: blur(8px);
+    }
+
+    to {
+        filter: blur(0px);
+    }
 }
 
 @keyframes gridSelectOut {
-	0% {filter: blur(0px);}
-	100% {filter: blur(8px);}
+    0% {
+        filter: blur(0px);
+    }
+
+    100% {
+        filter: blur(8px);
+    }
 }
 
-@keyframes fadeOut{
-	from{opacity: 1;}
-	to{opacity: 0;}
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
 }
 
-@keyframes scaleUp{
-	from {font-size: 140%}
-	to {font-size: 150%}
+@keyframes scaleUp {
+    from {
+        font-size: 140%
+    }
+
+    to {
+        font-size: 150%
+    }
 }
 
-@keyframes scaleDown{
-	0% {font-size: 150%}
-	100% {font-size: 140%}
+@keyframes scaleDown {
+    0% {
+        font-size: 150%
+    }
+
+    100% {
+        font-size: 140%
+    }
 }
 
-@keyframes modalBG{
-	from {background-color: transparent;}
-	to {background-color: var(--background-color);}
+@keyframes modalBG {
+    from {
+        background-color: transparent;
+    }
+
+    to {
+        background-color: var(--background-color);
+    }
 }
 
-@media (max-width: 760px){
-	.homeText{
-		padding: 5% 10%;
-	}
-	.banner-text{
-		font-size: 80%;
-	}
+@media (max-width: 760px) {
+    .homeText {
+        padding: 5% 10%;
+    }
+
+    .banner-text {
+        font-size: 80%;
+    }
 }
 
-@media screen and (max-width: 683px){
-	.grid-container{
-		grid-gap: 0px;
-	}
-	.grid-name, .grid-name-long{
-		display: none;
-		animation: none;
-	}
-	.grid-item-apps a:hover .grid-pic{
-		animation: gridSelectOut 0.5s;
-		animation-fill-mode: forwards;
-	}
-	.grid-pic{
-		width: 100%;
-		height: auto;
-		animation: gridSelectIn 0.5s;
-		filter: blur(0px);
-	}
-	.body-text{
-		padding: 0px;
-	}
-	.video-thumb{
-		display: none;
-		padding: none;
-	}
-	.article-link{
-		text-align: center;
-	}
-	.video-desc{
-		margin: 5px;
-		font-size: 80%;
-	}
-	.video-title{
-		font-weight: bold;
-		margin: 10px;
-	}
+@media screen and (max-width: 683px) {
+    .grid-container {
+        grid-gap: 0px;
+    }
+
+    .grid-name,
+    .grid-name-long {
+        display: none;
+        animation: none;
+    }
+
+    .grid-item-apps a:hover .grid-pic {
+        animation: gridSelectOut 0.5s;
+        animation-fill-mode: forwards;
+    }
+
+    .grid-pic {
+        width: 100%;
+        height: auto;
+        animation: gridSelectIn 0.5s;
+        filter: blur(0px);
+    }
+
+    .body-text {
+        padding: 0px;
+    }
+
+    .video-thumb {
+        display: none;
+        padding: none;
+    }
+
+    .article-link {
+        text-align: center;
+    }
+
+    .video-desc {
+        margin: 5px;
+        font-size: 80%;
+    }
+
+    .video-title {
+        font-weight: bold;
+        margin: 10px;
+    }
 }
 
-@media (max-width: 1590px){
-	.grid-container{
-	grid-template-columns: auto;
-}
+@media (max-width: 1590px) {
+    .grid-container {
+        grid-template-columns: auto;
+    }
 }
