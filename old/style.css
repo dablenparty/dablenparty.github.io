@@ -13,9 +13,9 @@
   --link-hover-color: darksalmon;
 }
 body {
-  font-family: Roboto Mono, monospace;
-  background-color: var(--primary-color);
-  color: var(--font-color);
+    font-family: Roboto Mono, monospace;
+    background-color: var(--primary-color);
+    color: var(--font-color);
   }
 @media screen and (max-width: 480px) { /*Centers the text on all screens with a CSS width less than 480px. Used for mobile formatting.*/
   body {
