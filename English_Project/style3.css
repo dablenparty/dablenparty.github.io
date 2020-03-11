@@ -120,3 +120,12 @@ main {
         width: 39%;
     }
 }
+
+.home {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: var(--font-color);
+    font-size: 133%;
+    font-weight: bolder;
+}
