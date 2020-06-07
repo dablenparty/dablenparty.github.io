@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary-color: #2A2A2A;
+    --secondary-color: #222222;
+    --tertiary-color: #333333;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    color: white;
+    background-color: var(--primary-color);
+}
+
+#navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: var(--secondary-color);
+}
+
+.nav-item {
+    display: inline;
+    float: left;
+}
+
+.nav-item a {
+    transition: all .3s ease-in;
+    -webkit-transition: all.3s ease-in;
+    text-align: center;
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: white;
+}
+
+.nav-item a:hover {
+    background-color: white;
+    color: black;
+}
+
+.active {
+    background-color: white;
+}
