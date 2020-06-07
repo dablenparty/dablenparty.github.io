@@ -11,14 +11,26 @@
     <body>
         <div class="top-banner">
             <ul id="navbar">
-                <li class="nav-item"><a href="www.youtube.com">HOME</a></li>
-                <li class="nav-item"><a href="www.google.com">APPS PAGE</a></li>
-                <li class="nav-item"><a href="www.amazon.com">GITHUB</a></li>
+                <li class="nav-item"><a class="nav-link active" id="defaultOpen" href="#home" onclick="openPage('home')">HOME</a></li>
+                <li class="nav-item"><a class="nav-link" href="#apps-page" onclick="openPage('apps-page')">APPS PAGE</a></li>
+                <li class="nav-item"><a class="nav-link" href="#github" onclick="openPage('github')">GITHUB</a></li>
             </ul>
-        </div> <br>
-        <h1>this is new</h1>
-        <p>am i a masochist? hard coding this  entire thing?</p>
+        </div>
+        <br>
+        <div id="home" class="nav-content">
+            <h1>this is new</h1>
+            <p>am i a masochist? hard coding this  entire thing?</p>
+        </div>
+        <div id="apps-page" class="nav-content">
+            <h1>APPS PAGE</h1>
+            <p>congration, you done it.</p>
+        </div>
+        <div id="github" class="nav-content">
+            <h1>UNDER CONSTRUCTION</h1>
+            <p>make it a dropdown for different repositories</p>
+        </div>
     </body>
+    <script src="navBar.js"></script>
 </html>
 
 

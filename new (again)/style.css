@@ -39,11 +39,22 @@ body {
     color: white;
 }
 
-.nav-item a:hover {
+.active a, .nav-item a:hover {
     background-color: white;
     color: black;
 }
 
-.active {
-    background-color: white;
+.nav-content {
+    animation: fadeIn 1s;
+}
+
+
+/* KEYFRAMES */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
