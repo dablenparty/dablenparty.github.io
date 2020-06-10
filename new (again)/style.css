@@ -18,9 +18,9 @@ body {
 
 #navbar {
     list-style-type: none;
+    overflow: hidden;
     margin: 0;
     padding: 0;
-    overflow: hidden;
     background-color: var(--secondary-color);
 }
 
@@ -37,9 +37,11 @@ body {
     padding: 8px 16px;
     text-decoration: none;
     color: white;
+    cursor: pointer;
 }
 
-.active a, .nav-item a:hover {
+.active a,
+.nav-item a:hover {
     background-color: white;
     color: black;
 }
@@ -48,12 +50,12 @@ body {
     animation: fadeIn 1s;
 }
 
-
 /* KEYFRAMES */
 @keyframes fadeIn {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }

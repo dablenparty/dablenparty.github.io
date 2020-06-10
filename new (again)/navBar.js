@@ -12,9 +12,9 @@ function openPage(page) {
     navBar = document.getElementById("navbar");
     navItem = navBar.getElementsByClassName("nav-item");
     for (i = 0; i < navItem.length; i++) {
-        navItem[i].addEventListener("click", function() {
+        navItem[i].addEventListener("click", function () {
             var current = document.getElementsByClassName("active");
-            current[0].className = current[0].className.replace(" active","");
+            current[0].className = current[0].className.replace(" active", "");
             this.className += " active"; // Sets the class of the element that initiated the function
         });
     }
