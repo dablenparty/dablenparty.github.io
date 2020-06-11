@@ -78,6 +78,8 @@ body {
 .grid-item {
     padding: 20px;
     font-size: 30px;
+    width: 256px;
+    height: 256px;
     text-align: center;
     overflow: hidden;
     background-color: var(--secondary-color);
@@ -86,6 +88,12 @@ body {
 .grid-pic {
     width: 256px;
     height: 256px;
+    animation: gridImageScaleDown 0.5s;
+}
+
+.grid-pic:hover{
+    animation: gridImageScaleUp 0.5s;
+    animation-fill-mode: forwards;
 }
 
 .scroll-menu {
@@ -103,14 +111,23 @@ body {
 .scroll-item {
     display: inline-block;
     padding: 16px;
+    overflow: hidden;
+    width: 192px;
+    height: 192px;
+    background-color: var(--secondary-color);
 }
 
 .scroll-pic {
-    padding: 20px;
     width: 192px;
     height: 192px;
     overflow: hidden;
-    background-color: var(--secondary-color);
+    animation: scrollImageScaleDown 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.scroll-pic:hover {
+    animation: scrollImageScaleUp 0.5s;
+    animation-fill-mode: forwards;
 }
 
 @media screen and (max-width: 1150px) {
@@ -160,5 +177,53 @@ body {
 
     to {
         transform: translateY(0px);
+    }
+}
+
+@keyframes gridImageScaleUp {
+    from {
+        width: 256px;
+        height: 256px;
+    }
+    to {
+        transform: translate(-16px,-16px);
+        width: 288px;
+        height: 288px;
+    }
+}
+
+@keyframes gridImageScaleDown {
+    from {
+        transform: translate(-16px,-16px);
+        width: 288px;
+        height: 288px;
+    }
+    to {
+        width: 256px;
+        height: 256px;
+    }
+}
+
+@keyframes scrollImageScaleUp {
+    from {
+        width: 192px;
+        height: 192px;
+    }
+    to {
+        transform: translate(-16px,-16px);
+        width: 224px;
+        height: 224px;
+    }
+}
+
+@keyframes scrollImageScaleDown {
+    from {
+        transform: translate(-16px,-16px);
+        width: 224px;
+        height: 224px;
+    }
+    to {
+        width: 192px;
+        height: 192px;
     }
 }
