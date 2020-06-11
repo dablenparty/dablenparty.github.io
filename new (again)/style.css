@@ -64,6 +64,62 @@ body {
 .page-subheader {
     font-weight: normal;
     animation: slideDown 1s;
+    padding: 0px 140px;
+}
+
+.grid-container {
+    padding: 56px;
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 56px 56px;
+    justify-content: space-around;
+}
+
+.grid-item {
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    overflow: hidden;
+    background-color: var(--secondary-color);
+}
+
+.grid-pic {
+    width: 256px;
+    height: 256px;
+}
+
+.scroll-menu {
+    display: none;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -ms-overflow-style: none;
+    white-space: nowrap;
+}
+
+.scroll-menu::-webkit-scrollbar {
+    display: none;
+}
+
+.scroll-item {
+    display: inline-block;
+    padding: 16px;
+}
+
+.scroll-pic {
+    padding: 20px;
+    width: 192px;
+    height: 192px;
+    overflow: hidden;
+    background-color: var(--secondary-color);
+}
+
+@media screen and (max-width: 1150px) {
+    .grid-container {
+        display: none;
+    }
+    .scroll-menu {
+        display: block;
+    }
 }
 
 /* KEYFRAMES */
