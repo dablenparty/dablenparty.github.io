@@ -130,6 +130,47 @@ body {
     animation-fill-mode: forwards;
 }
 
+.app-grid {
+    display: inline-grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+.app-link {
+    text-decoration: none;
+    color: white;
+}
+
+.app-grid-item {
+    padding: 28px;
+    width: 256px;
+    height: 256px;
+    overflow: hidden;
+    background-color: var(--secondary-color);
+}
+
+.app-grid-item:hover .app-icon {
+    transition: all ease-in-out 0.15s;
+    transform: translate(0px,-292px);
+}
+
+.app-grid-item:hover .app-name {
+    transition: all ease-in-out 0.15s;
+    transform: translate(0px,-222px);
+}
+
+.app-icon {
+    transition: all ease-in-out 0.15s;
+    width: 256px;
+    height: auto;
+}
+
+.app-name {
+    vertical-align: middle;
+    transition: all ease-in-out 0.15s;
+    font-size: 48px;
+    word-wrap: normal;
+}
+
 @media screen and (max-width: 1150px) {
     #navbar {
         display: grid;
