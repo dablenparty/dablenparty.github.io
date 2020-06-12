@@ -8,7 +8,7 @@ const appList = [
   { name: "Visual Studio Code", link: "https://code.visualstudio.com/" },
   { name: "VLC", link: "https://www.videolan.org/vlc/index.html" },
   { name: "OBS", link: "https://obsproject.com/" },
-  { name: "GitHub Desktop", link: "https://desktop.github.com/" },
+  { name: "GitHub Desktop App", link: "https://desktop.github.com/" },
   { name: "Spotify", link: "https://www.spotify.com/us/download/other/" },
   {
     name: "GoXLR",
