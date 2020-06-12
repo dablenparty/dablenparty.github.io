@@ -25,8 +25,9 @@
     <div id="home" class="nav-content">
       <h1 class="page-header">home</h1>
       <h2 class="page-subheader">
-        am I a masochist? hard coding this entire thing?
+        welcome
       </h2>
+      <p>Truthfully, I don't have a real need for this site. It's more of a proof of concept that I can do it rather than anything that serves an actual purpose (other than the Apps Page). Because of this, I am well aware that some things may be poorly/incorrectly done; however, it <i>works</i> and that's enough to satisfy me. With that said, the Apps Page contains links to the programs I use on any PC I own and is the first place I go if I need to reset a machine. GitHub contains a link to my various repositories (I am most experienced in Python, although still very much a beginner) and YouTube contains embedded videos from my gaming channel, <a href="https://www.youtube.com/channel/UCxyvkQuyOND5ZXPCoPBVqog" target="_blank">oxapathic</a>. I don't think the about page needs an explanation.</p>
     </div>
     <div id="apps-page" class="nav-content">
       <h1 class="page-header">apps page</h1>
@@ -101,7 +102,9 @@
             allowfullscreen
           ></iframe>
         </div>
+        
       </div>
+      
       <div class="video-grid-mobile">
         <h3 class="video-frame-name">recent video</h3>
         <div class="video-container">
@@ -111,8 +114,7 @@
             frameborder="0"
             allowfullscreen
           ></iframe>
-        </div>
-        <h3 class="video-frame-name">random video</h3>
+        </div><h3 class="video-frame-name">random video</h3>
         <div class="video-container">
           <iframe
             class="random-video"
@@ -122,7 +124,9 @@
           ></iframe>
         </div>
       </div>
-    </div>
+      <div class="random-video-button"><button onclick="getRandomVideo()">new video</button></div>
+      
+    </>
     <div id="about" class="nav-content">
       <h1 class="page-header">about</h1>
       <h2 class="page-subheader">I play games, write code, and make videos. there really isn't anything else to say other than I'm aware of the grammar errors on the site, it's to keep a certain aesthetic.</h2>
@@ -131,11 +135,21 @@
   <script src="navBar.js"></script>
   <script src="appGridMaker.js"></script>
   <script>
-    var randIndex = Math.floor(Math.random() * 50 + 1),
+    function getRandomVideo() {
+      var randIndex = Math.floor(Math.random() * 50 + 1),
       randomVideo = document.getElementsByClassName("random-video");
-    for (var i = 0; i < randomVideo.length; i++) {
-      randomVideo[i].src =
-        randomVideo[i].src + "&index=" + randIndex.toString();
+
+      for (var i = 0; i < randomVideo.length; i++) {
+        var n = randomVideo[i].src.indexOf("&index");
+        if (n == -1) {
+          randomVideo[i].src = randomVideo[i].src + "&index=" + randIndex.toString();
+        }
+        else {
+          videoLink = randomVideo[i].src.split("&index=")[0];
+          randomVideo[i].src = videoLink + "&index=" + randIndex;
+        }
+      }
     }
+    getRandomVideo();
   </script>
 </html>

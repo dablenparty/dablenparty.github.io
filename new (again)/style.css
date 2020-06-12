@@ -43,6 +43,16 @@ body {
   color: black;
 }
 
+#home p {
+  padding: 16px 256px;
+  font-size: large;
+}
+
+#home a {
+  text-decoration: none;
+  color: white;
+}
+
 .nav-content {
   animation: fadeIn 1s;
 }
@@ -168,6 +178,21 @@ body {
   height: 360px;
 }
 
+.random-video-button {
+  padding: 16px;
+}
+
+.random-video-button button {
+  cursor: pointer;
+  background-color: transparent;
+  text-decoration: none;
+  border: none;
+  font-size: 36px;
+  font-weight: bold;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
 @media screen and (max-width: 1350px) {
   .video-grid {
     display: none;
@@ -193,6 +218,10 @@ body {
     font-size: 200%;
     padding: 16px 48px;
     text-align: center;
+  }
+
+  #home p {
+    padding: 16px 10%;
   }
 
   .app-grid,
