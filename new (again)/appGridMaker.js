@@ -1,5 +1,4 @@
 const appGrid = document.getElementsByClassName("app-grid");
-//var appList = ['discord','steam','fences','everything','voidtools','obs studio','github desktop','spotify','vlc','goxlr','adobe creative cloud','minecraft'];
 
 const appList = [
   { name: "Adobe Creative Cloud", link: "https://www.adobe.com" },
@@ -18,9 +17,10 @@ const appList = [
   },
   { name: "Minecraft", link: "https://www.minecraft.net/en-us/get-minecraft/" },
 ];
+
 // Sorts alphabetically by the name property
 appList.sort(function (x, y) {
-  let a = x.name.toUpperCase(),
+  let a = x.name.toUpperCase(), // Allows for case-insensitive comparison
     b = y.name.toUpperCase();
   return a == b ? 0 : a > b ? 1 : -1;
 });
@@ -42,12 +42,12 @@ for (var n = 0; n < appList.length; n++) {
   appIcon.className = "app-icon";
   var appFileName = appList[n].name;
   appFileName = appFileName.toLowerCase();
-  var i = appFileName.indexOf(" ");
+  var i = appFileName.indexOf(" "); // Get the index of the first space
   while (i != -1) {
-    console.log(i);
-    var before = appFileName.slice(i, i + 2);
-    appFileName = appFileName.replace(before, before[1].toUpperCase());
-    i = appFileName.indexOf(" ");
+    // While there are still spaces
+    var before = appFileName.slice(i, i + 2); // Get the space and its following character (e.g. "I am" --> " a")
+    appFileName = appFileName.replace(before, before[1].toUpperCase()); // Capitalize the character and remove the space (e.g. " a" --> "A")
+    i = appFileName.indexOf(" "); // Get the index of the next space (will return -1 and break the loop if no more spaces are found)
   }
   appFileName = appFileName + ".png";
   appIcon.src = "imgs/apps/" + appFileName;
