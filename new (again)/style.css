@@ -1,245 +1,245 @@
 @charset "UTF-8";
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 :root {
-    --primary-color: #2A2A2A;
-    --secondary-color: #222222;
-    --tertiary-color: #333333;
-    font-family: 'Poppins', sans-serif;
+  --primary-color: #2a2a2a;
+  --secondary-color: #222222;
+  --tertiary-color: #333333;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
-    text-align: center;
-    color: white;
-    background-color: var(--primary-color);
+  text-align: center;
+  color: white;
+  background-color: var(--primary-color);
 }
 
 #navbar {
-    list-style-type: none;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-    background-color: var(--secondary-color);
+  list-style-type: none;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  background-color: var(--secondary-color);
 }
 
 .nav-item {
-    display: inline;
-    float: left;
+  display: inline;
+  float: left;
 }
 
 .nav-item a {
-    transition: all .3s ease-in;
-    -webkit-transition: all.3s ease-in;
-    text-align: center;
-    display: block;
-    padding: 8px 16px;
-    text-decoration: none;
-    color: white;
-    cursor: pointer;
+  transition: all 0.3s ease-in;
+  -webkit-transition: all.3s ease-in;
+  text-align: center;
+  display: block;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
 }
 
 .active a,
 .nav-item a:hover {
-    background-color: white;
-    color: black;
+  background-color: white;
+  color: black;
 }
 
 .nav-content {
-    animation: fadeIn 1s;
+  animation: fadeIn 1s;
 }
 
 .page-header {
-    font-size: 60px;
-    animation: slideUp 1s;
+  font-size: 60px;
+  animation: slideUp 1s;
 }
 
 .page-header a {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
 
 .page-subheader {
-    font-weight: normal;
-    animation: slideDown 1s;
-    padding: 0px 140px;
+  font-weight: normal;
+  animation: slideDown 1s;
+  padding: 0px 140px;
 }
 
 .grid-container {
-    padding: 56px;
-    display: inline-grid;
-    grid-template-columns: auto auto auto;
-    grid-gap: 56px 56px;
-    justify-content: space-around;
+  padding: 56px;
+  display: inline-grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 56px 56px;
+  justify-content: space-around;
 }
 
 .grid-item {
-    padding: 20px;
-    font-size: 30px;
-    width: 256px;
-    height: 256px;
-    text-align: center;
-    overflow: hidden;
-    background-color: var(--secondary-color);
+  padding: 20px;
+  font-size: 30px;
+  width: 256px;
+  height: 256px;
+  text-align: center;
+  overflow: hidden;
+  background-color: var(--secondary-color);
 }
 
 .grid-pic {
-    width: 256px;
-    height: 256px;
-    animation: gridImageScaleDown 0.5s;
+  width: 256px;
+  height: 256px;
+  animation: gridImageScaleDown 0.5s;
 }
 
-.grid-pic:hover{
-    animation: gridImageScaleUp 0.5s;
-    animation-fill-mode: forwards;
+.grid-pic:hover {
+  animation: gridImageScaleUp 0.5s;
+  animation-fill-mode: forwards;
 }
 
 .app-grid {
-    padding: 56px;
-    grid-gap: 12px;
-    display: inline-grid;
-    grid-template-columns: auto auto auto auto;
+  padding: 56px;
+  grid-gap: 12px;
+  display: inline-grid;
+  grid-template-columns: auto auto auto auto;
 }
 
 .app-link {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
 
 .app-grid-item {
-    padding: 28px;
-    width: 256px;
-    height: 256px;
-    overflow: hidden;
-    background-color: var(--secondary-color);
+  padding: 28px;
+  width: 256px;
+  height: 256px;
+  overflow: hidden;
+  background-color: var(--secondary-color);
 }
 
 .app-grid-item:hover .app-icon {
-    transition: all ease-in-out 0.15s;
-    transform: translate(0px,-292px);
+  transition: all ease-in-out 0.15s;
+  transform: translate(0px, -292px);
 }
 
 .app-grid-item:hover .app-name {
-    transition: all ease-in-out 0.15s;
-    transform: translate(0px,-292px);
+  transition: all ease-in-out 0.15s;
+  transform: translate(0px, -292px);
 }
 
 .app-grid-item:hover .app-name-short {
-    transition: all ease-in-out 0.15s;
-    transform: translate(0px,-222px);
+  transition: all ease-in-out 0.15s;
+  transform: translate(0px, -222px);
 }
 
 .app-icon {
-    transition: all ease-in-out 0.15s;
-    width: 256px;
-    height: auto;
+  transition: all ease-in-out 0.15s;
+  width: 256px;
+  height: auto;
 }
 
 .app-name,
 .app-name-short {
-    font-weight: normal;
-    vertical-align: middle;
-    transition: all ease-in-out 0.15s;
-    font-size: 48px;
-    word-wrap: normal;
+  font-weight: normal;
+  vertical-align: middle;
+  transition: all ease-in-out 0.15s;
+  font-size: 48px;
+  word-wrap: normal;
 }
 
 @media screen and (max-width: 1150px) {
-    #navbar {
-        display: grid;
-        grid-template-columns: auto auto auto;
-    }
-    .nav-item {
-        font-size: 200%;
-    }
-    .nav-item a {
-        padding: 16px 32px;
-    }
+  #navbar {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+  .nav-item {
+    font-size: 200%;
+  }
+  .nav-item a {
+    padding: 16px 32px;
+  }
 
-    .app-grid,
-    .grid-container{
-        grid-template-columns: auto auto;
-        grid-gap: 56px;
-    }
+  .app-grid,
+  .grid-container {
+    grid-template-columns: auto auto;
+    grid-gap: 56px;
+  }
 }
 
 /* KEYFRAMES */
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
+  from {
+    opacity: 0;
+  }
 
-    to {
-        opacity: 1;
-    }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes slideUp {
-    from {
-        transform: translateY(20px);
-    }
+  from {
+    transform: translateY(20px);
+  }
 
-    to {
-        transform: translateY(0px);
-    }
+  to {
+    transform: translateY(0px);
+  }
 }
 
 @keyframes slideDown {
-    from {
-        transform: translateY(-20px);
-    }
+  from {
+    transform: translateY(-20px);
+  }
 
-    to {
-        transform: translateY(0px);
-    }
+  to {
+    transform: translateY(0px);
+  }
 }
 
 @keyframes gridImageScaleUp {
-    from {
-        width: 256px;
-        height: 256px;
-    }
-    to {
-        transform: translate(-16px,-16px);
-        width: 288px;
-        height: 288px;
-    }
+  from {
+    width: 256px;
+    height: 256px;
+  }
+  to {
+    transform: translate(-16px, -16px);
+    width: 288px;
+    height: 288px;
+  }
 }
 
 @keyframes gridImageScaleDown {
-    from {
-        transform: translate(-16px,-16px);
-        width: 288px;
-        height: 288px;
-    }
-    to {
-        width: 256px;
-        height: 256px;
-    }
+  from {
+    transform: translate(-16px, -16px);
+    width: 288px;
+    height: 288px;
+  }
+  to {
+    width: 256px;
+    height: 256px;
+  }
 }
 
 @keyframes scrollImageScaleUp {
-    from {
-        width: 192px;
-        height: 192px;
-    }
-    to {
-        transform: translate(-16px,-16px);
-        width: 224px;
-        height: 224px;
-    }
+  from {
+    width: 192px;
+    height: 192px;
+  }
+  to {
+    transform: translate(-16px, -16px);
+    width: 224px;
+    height: 224px;
+  }
 }
 
 @keyframes scrollImageScaleDown {
-    from {
-        transform: translate(-16px,-16px);
-        width: 224px;
-        height: 224px;
-    }
-    to {
-        width: 192px;
-        height: 192px;
-    }
+  from {
+    transform: translate(-16px, -16px);
+    width: 224px;
+    height: 224px;
+  }
+  to {
+    width: 192px;
+    height: 192px;
+  }
 }
