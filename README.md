@@ -1,3 +1,3 @@
-# This is my central site
+# dablenparty
 
-Anything relating to me (videos, articles, etc.) can be found on this site.
+Welcome to my central site. All of my other repositories are linked here, along with other files.
