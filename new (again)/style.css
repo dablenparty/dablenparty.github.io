@@ -96,41 +96,9 @@ body {
     animation-fill-mode: forwards;
 }
 
-.scroll-menu {
-    display: none;
-    overflow-x: auto;
-    overflow-y: hidden;
-    -ms-overflow-style: none;
-    white-space: nowrap;
-}
-
-.scroll-menu::-webkit-scrollbar {
-    display: none;
-}
-
-.scroll-item {
-    display: inline-block;
-    padding: 16px;
-    overflow: hidden;
-    width: 192px;
-    height: 192px;
-    background-color: var(--secondary-color);
-}
-
-.scroll-pic {
-    width: 192px;
-    height: 192px;
-    overflow: hidden;
-    animation: scrollImageScaleDown 0.5s;
-    animation-fill-mode: forwards;
-}
-
-.scroll-pic:hover {
-    animation: scrollImageScaleUp 0.5s;
-    animation-fill-mode: forwards;
-}
-
 .app-grid {
+    padding: 56px;
+    grid-gap: 12px;
     display: inline-grid;
     grid-template-columns: auto auto auto auto;
 }
@@ -189,15 +157,11 @@ body {
     .nav-item a {
         padding: 16px 32px;
     }
-    .grid-container {
-        display: none;
-    }
-    .scroll-menu {
-        display: block;
-    }
-    .app-grid{
+
+    .app-grid,
+    .grid-container{
         grid-template-columns: auto auto;
-        grid-gap: 32px;
+        grid-gap: 56px;
     }
 }
 
