@@ -14,27 +14,12 @@
 
   <body>
     <div class="top-banner">
-      <ul id="navbar">
-        <li class="nav-item">
-          <a
-            class="nav-link active"
-            id="defaultOpen"
-            href="#home"
-            onclick="openPage('home')"
-            >HOME</a
-          >
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#apps-page" onclick="openPage('apps-page')"
-            >APPS PAGE</a
-          >
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#github" onclick="openPage('github')"
-            >GITHUB</a
-          >
-        </li>
-      </ul>
+      <div id="navbar">
+        <a id="defaultOpen" href="#home" onclick="openPage('home')">HOME</a>
+        <a href="#apps-page" onclick="openPage('apps-page')">APPS PAGE</a>
+        <a href="#github" onclick="openPage('github')">GITHUB</a>
+        <a href="#youtube" onclick="openPage('youtube')">YOUTUBE</a>
+      </div>
     </div>
     <div id="home" class="nav-content">
       <h1 class="page-header">home</h1>
@@ -90,7 +75,62 @@
         </div>
       </div>
     </div>
+    <div id="youtube" class="nav-content">
+      <h1 class="page-header">youtube</h1>
+      <h2 class="page-subheader">
+        I also make youtube videos. they're mainly gaming videos but there's a
+        few school projects out there.
+      </h2>
+      <div class="video-grid">
+        <h3 class="video-frame-name">recent video</h3>
+        <h3 class="video-frame-name">random video</h3>
+        <div class="video-container">
+          <iframe
+            class="recent-video"
+            src="https://www.youtube.com/embed/?listType=playlist&list=UUxyvkQuyOND5ZXPCoPBVqog"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="video-container">
+          <iframe
+            class="random-video"
+            src="https://www.youtube.com/embed/?listType=playlist&list=UUxyvkQuyOND5ZXPCoPBVqog"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+      <div class="video-grid-mobile">
+        <h3 class="video-frame-name">recent video</h3>
+        <div class="video-container">
+          <iframe
+            class="recent-video"
+            src="https://www.youtube.com/embed/?listType=playlist&list=UUxyvkQuyOND5ZXPCoPBVqog"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <h3 class="video-frame-name">random video</h3>
+        <div class="video-container">
+          <iframe
+            class="random-video"
+            src="https://www.youtube.com/embed/?listType=playlist&list=UUxyvkQuyOND5ZXPCoPBVqog"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </div>
   </body>
   <script src="navBar.js"></script>
   <script src="appGridMaker.js"></script>
+  <script>
+    var randIndex = Math.floor(Math.random() * 50 + 1),
+      randomVideo = document.getElementsByClassName("random-video");
+    for (var i = 0; i < randomVideo.length; i++) {
+      randomVideo[i].src =
+        randomVideo[i].src + "&index=" + randIndex.toString();
+    }
+  </script>
 </html>
