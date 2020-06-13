@@ -51,6 +51,7 @@ for (var n = 0; n < appList.length; n++) {
   }
   appFileName = appFileName + ".png";
   appIcon.src = "imgs/apps/" + appFileName;
+  appIcon.alt = appFileName;
 
   /* ----- Text Content ----- */
   if (appList[n].name.length <= 10) {
