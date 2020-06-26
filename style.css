@@ -29,7 +29,8 @@ body {
   float: left;
 }
 
-#navbar a, .dropdown a {
+#navbar a,
+.dropdown a {
   transition: all 0.3s ease-in;
   -webkit-transition: all.3s ease-in;
   text-align: center;
@@ -47,7 +48,6 @@ body {
 }
 
 .dropdown {
-  float: left;
   display: inline-block;
 }
 
@@ -56,16 +56,10 @@ body {
   visibility: hidden;
   opacity: 0;
   transition-property: opacity, visibility;
-  transition-duration: 0.2s,0s;
+  transition-duration: 0.2s, 0s;
   transition-delay: 0s, 0.2s;
   z-index: 1;
   background-color: var(--secondary-color);
-}
-
-.dropdown:hover .dropdown-content {
-  visibility: visible;
-  opacity: 1;
-  transition-delay: 0s,0s;
 }
 
 #home p {
@@ -98,12 +92,11 @@ body {
   padding: 0px 140px;
 }
 
-.grid-container {
+.repo-grid {
   padding: 56px;
   display: inline-grid;
   grid-template-columns: auto auto auto;
   grid-gap: 56px 56px;
-  justify-content: space-around;
 }
 
 .grid-item {
@@ -170,6 +163,7 @@ body {
 
 .app-name,
 .app-name-short {
+  text-align: center;
   font-weight: normal;
   vertical-align: middle;
   transition: all ease-in-out 0.15s;
@@ -218,12 +212,21 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-@media screen and (max-width: 1350px) {
+/* The dropdown should only be available on the larger variant, so a min-width rule is added (as opposed to the succeeding max-width) so that it is only available on widths LARGER than set */
+@media screen and (max-width: 1150px) {
   .video-grid {
     display: none;
   }
   .video-grid-mobile {
     display: inline-grid;
+  }
+}
+
+@media screen and (min-width: 1150px) {
+  .dropdown:hover .dropdown-content {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0s, 0s;
   }
 }
 
@@ -250,7 +253,7 @@ body {
   }
 
   .app-grid,
-  .grid-container {
+  .repo-grid {
     grid-template-columns: auto auto;
     grid-gap: 56px;
   }
