@@ -133,17 +133,18 @@
   <script src="js/gridMaker.js"></script>
   <script>
     function getRandomVideo() {
-      var randIndex = Math.floor(Math.random() * 50 + 1),
+      var randIndex = Math.floor(Math.random() * 50 + 1), // Gets a random number between 0 and 50
         randomVideo = document.getElementsByClassName("random-video");
 
       for (var i = 0; i < randomVideo.length; i++) {
         var n = randomVideo[i].src.indexOf("&index");
         if (n == -1) {
+          // If "&index" is not found...
           randomVideo[i].src =
-            randomVideo[i].src + "&index=" + randIndex.toString();
+            randomVideo[i].src + "&index=" + randIndex.toString(); // Adds the random video index to the src attribute
         } else {
-          videoLink = randomVideo[i].src.split("&index=")[0];
-          randomVideo[i].src = videoLink + "&index=" + randIndex;
+          videoLink = randomVideo[i].src.split("&index=")[0]; // Removes "&index=" from the src attribute
+          randomVideo[i].src = videoLink + "&index=" + randIndex; // Adds it back with the new index
         }
       }
     }
