@@ -52,7 +52,7 @@ const gridData = [
   {
     type: "app",
     name: "Steam",
-    link: "https://store.steampowered.com/about/"
+    link: "https://store.steampowered.com/about/",
   },
   {
     type: "repo",
@@ -88,57 +88,57 @@ const gridData = [
 
 // Sorts the list alphabetically by the "name" property
 gridData.sort(function (x, y) {
-    let a = x.name.toUpperCase(), // Allows for case-insensitive comparison
-      b = y.name.toUpperCase();
-    return a == b ? 0 : a > b ? 1 : -1;
-  });
+  let a = x.name.toUpperCase(), // Allows for case-insensitive comparison
+    b = y.name.toUpperCase();
+  return a == b ? 0 : a > b ? 1 : -1;
+});
 
 for (var n = 0; n < gridData.length; n++) {
-    /* ------ Creates the needed elements ------ */
-    var grid;
-    const gridLink = document.createElement("a");
-    const gridDiv = document.createElement("div");
-    const gridIcon = document.createElement("img");
-    const gridName = document.createElement("h3");
+  /* ------ Creates the needed elements ------ */
+  var grid;
+  const gridLink = document.createElement("a");
+  const gridDiv = document.createElement("div");
+  const gridIcon = document.createElement("img");
+  const gridName = document.createElement("h3");
 
-    /* ----------- Link ----------- */
-    gridLink.className = "app-link";
-    gridLink.target = "_blank";
-    gridLink.href = gridData[n].link;
+  /* ----------- Link ----------- */
+  gridLink.className = "app-link";
+  gridLink.target = "_blank";
+  gridLink.href = gridData[n].link;
 
-    /* ------------- Image ------------- */
-    gridDiv.className = "app-grid-item";
-    gridIcon.className = "app-icon";
-    var imgFileName = gridData[n].name.toLowerCase();
-    if (gridData[n].type == "app") {
-        var i = imgFileName.indexOf(" "); // Get index of first space
-        while (i != -1) { // While there are still spaces
-            var before = imgFileName.slice(i, i + 2); // Gets the space and its following character
-            imgFileName = imgFileName.replace(before, before[1].toUpperCase()); // Capitalize the character and remove the space
-            i = imgFileName.indexOf(" "); // Find next space (returns -1 if no space is found, breaking the while loop)
-        }
-        gridIcon.src = "imgs/apps/" + imgFileName + ".png";
-        grid = document.getElementsByClassName("app-grid");
+  /* ------------- Image ------------- */
+  gridDiv.className = "app-grid-item";
+  gridIcon.className = "app-icon";
+  var imgFileName = gridData[n].name.toLowerCase();
+  if (gridData[n].type == "app") {
+    var i = imgFileName.indexOf(" "); // Get index of first space
+    while (i != -1) {
+      // While there are still spaces
+      var before = imgFileName.slice(i, i + 2); // Gets the space and its following character
+      imgFileName = imgFileName.replace(before, before[1].toUpperCase()); // Capitalize the character and remove the space
+      i = imgFileName.indexOf(" "); // Find next space (returns -1 if no space is found, breaking the while loop)
     }
-    else if (gridData[n].type == "repo") {
-        if (imgFileName == "c++") {
-            imgFileName = "cpp";
-        }
-        gridIcon.src = "imgs/repos/" + imgFileName + ".png";
-        grid = document.getElementsByClassName("repo-grid");
+    gridIcon.src = "imgs/apps/" + imgFileName + ".png";
+    grid = document.getElementsByClassName("app-grid");
+  } else if (gridData[n].type == "repo") {
+    if (imgFileName == "c++") {
+      imgFileName = "cpp";
     }
-    
-    /* ------------ Text Content ------------ */
-    if (gridData[n].name.length <= 10) {
-        gridName.className = "app-name-short";
-    } else {
-        gridName.className = "app-name";
-    }
-    gridName.textContent = gridData[n].name;
+    gridIcon.src = "imgs/repos/" + imgFileName + ".png";
+    grid = document.getElementsByClassName("repo-grid");
+  }
 
-    /* -------- Creation -------- */
-    gridDiv.appendChild(gridIcon);
-    gridDiv.appendChild(gridName);
-    gridLink.appendChild(gridDiv);
-    grid[0].appendChild(gridLink);
+  /* ------------ Text Content ------------ */
+  if (gridData[n].name.length <= 10) {
+    gridName.className = "app-name-short";
+  } else {
+    gridName.className = "app-name";
+  }
+  gridName.textContent = gridData[n].name;
+
+  /* -------- Creation -------- */
+  gridDiv.appendChild(gridIcon);
+  gridDiv.appendChild(gridName);
+  gridLink.appendChild(gridDiv);
+  grid[0].appendChild(gridLink);
 }
