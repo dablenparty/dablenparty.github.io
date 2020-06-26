@@ -50,6 +50,11 @@ const gridData = [
     link: "https://www.minecraft.net/en-us/get-minecraft/",
   },
   {
+    type: "app",
+    name: "Steam",
+    link: "https://store.steampowered.com/about/"
+  },
+  {
     type: "repo",
     name: "AHK",
     link: "https://github.com/dablenparty/autohotkey",
