@@ -11,7 +11,9 @@ const gridData = [
     name: "Everything",
     link: "https://www.voidtools.com/downloads/",
   },
-  { type: "app", name: "Discord", link: "https://www.discord.com" },
+  { type: "app", 
+    name: "Discord", 
+    link: "https://www.discord.com" },
   {
     type: "app",
     name: "Fences",
@@ -27,7 +29,9 @@ const gridData = [
     name: "VLC",
     link: "https://www.videolan.org/vlc/index.html",
   },
-  { type: "app", name: "OBS", link: "https://obsproject.com/" },
+  { type: "app", 
+    name: "OBS", 
+    link: "https://obsproject.com/" },
   {
     type: "app",
     name: "GitHub Desktop",
@@ -63,6 +67,11 @@ const gridData = [
     type: "app",
     name: "WinDirStat",
     link: "https://windirstat.net/"
+  },
+  {
+    type: "app",
+    name: "Rainmeter",
+    link: "https://www.rainmeter.net/"
   },
   {
     type: "repo",
