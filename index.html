@@ -1,156 +1,154 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>dablenparty</title>
-    <link rel="stylesheet" href="style2.css" media="screen">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:500&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:500&display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
     <link rel="icon" type="image/png" href="imgs/favicon.png" />
-</head>
+    <title>dablenparty</title>
+    <link rel="icon" type="image/png" href="imgs/favicon.png" />
+  </head>
 
-<body>
-    <div class="banner-outer">
-        <div class="banner"></div>
-        <div class="banner-text">
-            <a class="homeHeader" href="#home" id="defaultOpen" style="font-size: 500%;" onClick="openPage('Home', 'home')">HOME</a>
-            <p class="homeText">Hi there! This page is always under construction, and many things are very much work in progress. I am using this site as my test bed to learn web design and web coding, so it will constantly evolve with my skills in both areas. With that said, feel free to explore! Now with Dark Mode! (check the Settings menu)</p>
-            <br>
-            <div class="nav-bar">
-                <a href="#projects" class="tablinks" onclick="openPage('Videos', 'projects')">PROJECTS</a>
-                <a href="#apps" class="tablinks" onClick="openPage('Apps Page', 'apps')">APPS PAGE</a>
-                <a href="#about" class="tablinks" onclick="openPage('About', 'about')">ABOUT</a>
-                <a href="new (again)/index2.html">NEW PAGE</a>
-            </div>
+  <body>
+    <ul id="navbar">
+      <li>
+        <a id="defaultOpen" href="#home" onclick="openPage('home')">HOME</a>
+      </li>
+      <li>
+        <a href="#apps-page" onclick="openPage('apps-page')">APPS PAGE</a>
+      </li>
+      <li class="dropdown">
+        <a href="#github" onclick="openPage('github')">GITHUB</a>
+        <div class="dropdown-content">
+          <a
+            href="http://htmlpreview.github.io/?https://github.com/dablenparty/javascript/blob/master/html/index.html"
+            >JAVASCRIPT</a
+          >
         </div>
+      </li>
+      <li><a href="#youtube" onclick="openPage('youtube')">YOUTUBE</a></li>
+      <li><a href="#about" onclick="openPage('about')">ABOUT</a></li>
+    </ul>
+    <div id="home" class="nav-content">
+      <h1 class="page-header">home</h1>
+      <h2 class="page-subheader">
+        welcome
+      </h2>
+      <p>
+        Truthfully, I don't have a real need for this site. It's more of a proof
+        of concept that I can do it rather than anything that serves an actual
+        purpose (other than the Apps Page). Because of this, I am well aware
+        that some things may be poorly/incorrectly done; however, it
+        <i>works</i> and that's enough to satisfy me. With that said, the Apps
+        Page contains links to the programs I use on any PC I own and is the
+        first place I go if I need to reset a machine. GitHub contains a link to
+        my various repositories (I am most experienced in Python, although still
+        very much a beginner) and YouTube contains embedded videos from my
+        gaming channel,
+        <a
+          href="https://www.youtube.com/channel/UCxyvkQuyOND5ZXPCoPBVqog"
+          target="_blank"
+          >oxapathic</a
+        >. I don't think the about page needs an explanation.
+      </p>
     </div>
-    <div id="home" class="tabcontent">
-        <h1 class="body-header">WELCOME!</h1>
-        <p class="body-text">Use the Navigation Bar above to find what you're looking for. Search functionality will come later.</p>
-        <button id="settings-button">SETTINGS</button>
-        <div id="settings-menu" class="modal">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2>SETTINGS</h2>
-                </div>
-                <div class="modal-body">
-                    <span class="close">&times;</span>
-                    <p>DARK MODE</p>
-                    <label class="switch">
-                        <input type="checkbox" id="modeToggle" onclick="modeFunc()">
-                        <span class="slider round"></span>
-                    </label>
-                </div>
-            </div>
-        </div>
+    <div id="apps-page" class="nav-content">
+      <h1 class="page-header">apps page</h1>
+      <h2 class="page-subheader">a list of apps that I need</h2>
+      <div class="app-grid"></div>
     </div>
-    <div id="projects" class="tabcontent">
-        <h1 class="body-header">PROJECTS</h1>
-        <p class="body-text">Here, you can find links to all of my educational videos/personal projects. I do these both by request of those around me, and on my own volition.</p>
-        <div class="video-box">
-            <a class="video-link" href="https://youtu.be/wfpZL756HzI" target="_blank"><img class="video-thumb" src="imgs/thumbs/tension.jpg"></a>
-            <a class="article-link" href="https://youtu.be/wfpZL756HzI" target="_blank">
-                <h3 class="video-title">REDUCING TENSION TO A SINGLE EQUATION</h3>
-                <p class="video-desc">In this video, I took tension problems that commonly trip people up, and reduced the messy systems to a single simple equation.</p>
-            </a>
-        </div>
-        <br>
-        <div class="video-box">
-            <a class="video-link" href="https://youtu.be/dx6E-lQCaFQ" target="_blank"><img class="video-thumb" src="imgs/thumbs/newts-laws.jpg"></a>
-            <a class="article-link" href="https://youtu.be/dx6E-lQCaFQ" target="_blank">
-                <h3 class="video-title">NEWTON'S LAWS DEMOS</h3>
-                <p class="video-desc">This video explores some simple yet elusive examples of Newton's First and Third laws that I've come across in my day-to-day life.</p>
-            </a>
-        </div>
-        <br>
-        <div class="video-box">
-            <a class="video-link" href="https://youtu.be/fIsNu8e1Mjk" target="_blank"><img class="video-thumb" src="imgs/thumbs/rocket-cop.jpg"></a>
-            <a class="article-link" href="https://youtu.be/fIsNu8e1Mjk" target="_blank">
-                <h3 class="video-title">FINDING A ROCKET'S CENTER OF PRESSURE</h3>
-                <p class="video-desc">This explores how to take the rather complicated fluid dynamics problem of locating a rocket's center of pressure and easily solve it through simple geometry and algebra.</p>
-            </a>
-        </div>
-        <br>
-        <div class="video-box">
-            <a class="video-link" href="https://youtu.be/VDUTNpQfXr0" target="_blank"><img class="video-thumb" src="imgs/thumbs/sc-analysis.jpg"></a>
-            <a class="article-link" href="https://youtu.be/VDUTNpQfXr0" target="_blank">
-                <h3 class="video-title">STAR CITIZEN PHYSICS ANALYSIS</h3>
-                <p class="video-desc">I made this as a project for my Honors Physics course, and will be going back after this year to redo this with a much deeper understanding of what's going on (also with calculus). It's also on a separate YouTube channel, as that was the one I used to use until I lost the login info.</p>
-            </a>
-        </div>
+    <div id="github" class="nav-content">
+      <h1 class="page-header">
+        <a href="https://github.com" title="GitHub" target="_blank">github</a>
+      </h1>
+      <h2 class="page-subheader">
+        my various repositories. don't worry, I am well aware that the code may
+        be sub-par, but I prefer hands on learning.
+      </h2>
+      <div class="repo-grid"></div>
     </div>
-    <div id="apps" class="tabcontent">
-        <h1 class="body-header">APPS PAGE</h1>
-        <p class="body-text">I am constantly having to reset my home PC, and use multiple computers anyways, so this page is an easy-access collection of my necessary apps and programs. It is also sorted alphabetically.</p>
-        <div class="grid-container">
-            <div class="grid-item-apps"><a href="http://brackets.io/" target="_blank" class="grid-link" title="A web-development-oriented text editor with special features for HTML, CSS, and JavaScript"><img class="grid-pic" src="imgs/brackets.png" alt="brackets.png">
-                    <h2 class="grid-name">BRACKETS</h2>
-                </a></div>
-            <div class="grid-item-apps"><a href="https://discordapp.com/" target="_blank" class="grid-link" title="A web-based communication service"><img class="grid-pic" src="imgs/discord.png" alt="discord.png">
-                    <h2 class="grid-name">DISCORD</h2>
-                </a></div>
-            <div class="grid-item-apps"><a href="https://www.escapefromtarkov.com/" target="_blank" title="A Russian game that lowers my self esteem and farms my computer for processing power"><img class="grid-pic" src="imgs/tarkov.jpg" alt="tarkov.jpg">
-                    <h2 class="grid-name-long">ESCAPE FROM TARKOV</h2>
-                </a></div>
-            <div class="grid-item-apps"><a href="https://www.voidtools.com/" target="_blank" title="Locate files and folders by name instantly"><img class="grid-pic" src="imgs/voidtools.jpg" alt="voidtools.jpg">
-                    <h2 class="grid-name">EVERYTHING</h2>
-                </a></div>
-            <div class="grid-item-apps"><a href="https://desktop.github.com/" target="_blank" title="Manages repositories, allowing syncing between all devices"><img class="grid-pic" src="imgs/github-desktop.png" alt="github-mac.png">
-                    <h2 class="grid-name">GITHUB DESKTOP</h2>
-                </a></div>
-            <div class="grid-item-apps"><a href="https://obsproject.com/" target="_blank" title="The be-all, end-all recording software"><img class="grid-pic" src="imgs/obs.jpg" alt="obs.jpg">
-                    <h2 class="grid-name">OBS STUDIO</h2>
-                </a></div>
-            <div class="grid-item-apps"><a href="https://socialclub.rockstargames.com/rockstar-games-launcher" target="_blank" title="Because EVERYBODY needs their own launcher"><img class="grid-pic" src="imgs/rockstar-launcher.png" alt="rockstar-launcher.png">
-                    <h2 id="rockstar" class="grid-name-long">ROCKSTAR LAUNCHER</h2>
-                </a></div>
-            <div class="grid-item-apps"><a href="https://www.spotify.com/us/download/" target="_blank" title="A music player that is somehow losing money"><img class="grid-pic" src="imgs/spotify.png" alt="spotify.png">
-                    <h2 class="grid-name">SPOTIFY</h2>
-                </a></div>
-            <div class="grid-item-apps"><a href="https://robertsspaceindustries.com/" target="_blank" title="THE space sim, I enjoy this so much that I forgive its many transgressions (there are a lot)"><img class="grid-pic" src="imgs/star-citizen.jpg" alt="star-citizen.jpg">
-                    <h2 class="grid-name">STAR CITIZEN</h2>
-                </a></div>
-            <div class="grid-item-apps"><a href="https://store.steampowered.com/about/" target="_blank" title="No introduction needed"><img class="grid-pic" src="imgs/steam.jpg" alt="steam.jpg">
-                    <h2 class="grid-name">STEAM</h2>
-                </a></div>
-            <div class="grid-item-apps"><a href="https://www.videolan.org/vlc/index.html" target="_blank" title="A media player for all kinds of files, can also override the default OS programs"><img class="grid-pic" src="imgs/vlc.jpg" alt="vlc.jpg">
-                    <h2 class="grid-name">VLC</h2>
-                </a></div>
-            <div class="grid-item-apps"><a href="https://code.visualstudio.com/" target="_blank" title="A text editor with built in Powershell, Terminal, and Debugging functionality, complete with an expansive extension marketplace"><img class="grid-pic" src="imgs/vs-code.png" alt="vs-code.png">
-                    <h2 class="grid-name">VS CODE</h2>
-                </a></div>
+    <div id="youtube" class="nav-content">
+      <h1 class="page-header">youtube</h1>
+      <h2 class="page-subheader">
+        I also make youtube videos. they're mainly gaming videos but there's a
+        few school projects out there.
+      </h2>
+      <div class="video-grid">
+        <h3 class="video-frame-name">recent video</h3>
+        <h3 class="video-frame-name">random video</h3>
+        <div class="video-container">
+          <iframe
+            class="recent-video"
+            src="https://www.youtube.com/embed/?listType=playlist&list=UUxyvkQuyOND5ZXPCoPBVqog"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
         </div>
+        <div class="video-container">
+          <iframe
+            class="random-video"
+            src="https://www.youtube.com/embed/?listType=playlist&list=UUxyvkQuyOND5ZXPCoPBVqog"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+
+      <div class="video-grid-mobile">
+        <h3 class="video-frame-name">recent video</h3>
+        <div class="video-container">
+          <iframe
+            class="recent-video"
+            src="https://www.youtube.com/embed/?listType=playlist&list=UUxyvkQuyOND5ZXPCoPBVqog"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <h3 class="video-frame-name">random video</h3>
+        <div class="video-container">
+          <iframe
+            class="random-video"
+            src="https://www.youtube.com/embed/?listType=playlist&list=UUxyvkQuyOND5ZXPCoPBVqog"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+      <div class="random-video-button">
+        <button onclick="getRandomVideo()">new video</button>
+      </div>
     </div>
-    <div id="about" class="tabcontent">
-        <h1 class="body-header">ABOUT</h1>
-        <p class="body-text">I am a student who enjoys computers, so much so that I am pursuing a career in writing code for them. My skills range far outside of just that, however; in fact, coding is my least matured skill. I am much more proficient in video and photo editing, and also play a multitude of video games. I also create videos for education as well, usually revolving around phyics and mathematics.</p>
+    <div id="about" class="nav-content">
+      <h1 class="page-header">about</h1>
+      <h2 class="page-subheader">
+        I play games, write code, and make videos. there really isn't anything
+        else to say other than I'm aware of the grammar errors on the site, it's
+        to keep a certain aesthetic.
+      </h2>
     </div>
-</body>
-<script src="dropdown.js"></script>
-<script>
-    const checkBox = document.getElementById('modeToggle');
-    //Defining the function listed under the "onclick" parameter in the checkbox 
-    function modeFunc() {
-        if (checkBox.checked == true) {
-            document.documentElement.setAttribute('data-theme', 'dark'); //Checks if the checkbox is checked, and if so, sets the attribute titled "data-theme" (defined in style.css) to "dark"
-            localStorage.setItem('theme', 'dark'); //Stores the attribute in the line above in the browsers local storage under the title "theme" so that it remembers the users option
+  </body>
+  <script src="js/navBar.js"></script>
+  <script src="js/gridMaker.js"></script>
+  <script>
+    function getRandomVideo() {
+      var randIndex = Math.floor(Math.random() * 50 + 1), // Gets a random number between 0 and 50
+        randomVideo = document.getElementsByClassName("random-video");
+
+      for (var i = 0; i < randomVideo.length; i++) {
+        var n = randomVideo[i].src.indexOf("&index");
+        if (n == -1) {
+          // If "&index" is not found...
+          randomVideo[i].src =
+            randomVideo[i].src + "&index=" + randIndex.toString(); // Adds the random video index to the src attribute
         } else {
-            document.documentElement.setAttribute('data-theme', 'light');
-            localStorage.setItem('theme', 'light');
+          videoLink = randomVideo[i].src.split("&index=")[0]; // Removes "&index=" from the src attribute
+          randomVideo[i].src = videoLink + "&index=" + randIndex; // Adds it back with the new index
         }
+      }
     }
-    checkBox.addEventListener('change', modeFunc, false) //Adds an event listener to the function "modeFunc()"
-    const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null; //Sets the variable "currentTheme" to whatever is stored in "theme" for a returning user
-
-    if (currentTheme) {
-        document.documentElement.setAttribute('data-theme', currentTheme); //Sets the theme to whatever "currentTheme" is
-
-        if (currentTheme === 'dark') {
-            checkBox.checked = true; //If Dark Mode is on, noted by "theme" being set to 'dark', then it checks the checkbox for consistency
-        }
-    }
-
-</script>
-
+    getRandomVideo();
+  </script>
 </html>
