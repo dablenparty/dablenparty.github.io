@@ -60,6 +60,11 @@ const gridData = [
     link: "https://www.sublimetext.com/"
   },
   {
+    type: "app",
+    name: "WinDirStat",
+    link: "https://windirstat.net/"
+  },
+  {
     type: "repo",
     name: "AHK",
     link: "https://github.com/dablenparty/autohotkey",
