@@ -30,7 +30,7 @@ const gridData = [
   { type: "app", name: "OBS", link: "https://obsproject.com/" },
   {
     type: "app",
-    name: "GitHub Desktop App",
+    name: "GitHub Desktop",
     link: "https://desktop.github.com/",
   },
   {
@@ -53,6 +53,11 @@ const gridData = [
     type: "app",
     name: "Steam",
     link: "https://store.steampowered.com/about/",
+  },
+  {
+    type: "app",
+    name: "Sublime Text 3",
+    link: "https://www.sublimetext.com/"
   },
   {
     type: "repo",
@@ -131,7 +136,11 @@ for (var n = 0; n < gridData.length; n++) {
   /* ------------ Text Content ------------ */
   if (gridData[n].name.length <= 10) {
     gridName.className = "app-name-short";
-  } else {
+  } 
+  else if (gridData[n].name.length <= 16 && gridData[n].name.length > 10) {
+    gridName.className = "app-name-medium";
+  }
+  else {
     gridName.className = "app-name";
   }
   gridName.textContent = gridData[n].name;

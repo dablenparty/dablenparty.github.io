@@ -150,6 +150,11 @@ body {
   transform: translate(0px, -292px);
 }
 
+.app-grid-item:hover .app-name-medium {
+  transition: all ease-in-out 0.15s;
+  transform: translate(0px,-256px);
+}
+
 .app-grid-item:hover .app-name-short {
   transition: all ease-in-out 0.15s;
   transform: translate(0px, -222px);
@@ -162,6 +167,7 @@ body {
 }
 
 .app-name,
+.app-name-medium,
 .app-name-short {
   text-align: center;
   font-weight: normal;
