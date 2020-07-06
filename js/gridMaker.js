@@ -74,6 +74,16 @@ const gridData = [
     link: "https://www.rainmeter.net/"
   },
   {
+    type: "app",
+    name: "Visual Studio",
+    link: "https://visualstudio.microsoft.com/downloads/"
+  },
+  {
+    type: "app",
+    name: "Logitech G Hub",
+    link: "https://www.logitechg.com/en-us/innovation/g-hub.html"
+  },
+  {
     type: "repo",
     name: "AHK",
     link: "https://github.com/dablenparty/autohotkey",
