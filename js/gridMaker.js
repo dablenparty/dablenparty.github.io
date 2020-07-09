@@ -84,6 +84,11 @@ const gridData = [
     link: "https://www.logitechg.com/en-us/innovation/g-hub.html"
   },
   {
+    type: "app",
+    name: "PowerToys",
+    link: "https://github.com/microsoft/PowerToys/releases/"
+  },
+  {
     type: "repo",
     name: "AHK",
     link: "https://github.com/dablenparty/autohotkey",
