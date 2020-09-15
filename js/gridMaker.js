@@ -89,6 +89,11 @@ const gridData = [
     link: "https://github.com/microsoft/PowerToys/releases/"
   },
   {
+    type: "app",
+    name: "VALORANT",
+    link: "https://playvalorant.com/en-us/download/"
+  },
+  {
     type: "repo",
     name: "AHK",
     link: "https://github.com/dablenparty/autohotkey",
