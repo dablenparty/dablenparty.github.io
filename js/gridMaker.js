@@ -39,8 +39,8 @@ const gridData = [
   },
   {
     type: "app",
-    name: "Spotify",
-    link: "https://www.spotify.com/us/download/other/",
+    name: "YouTube Music",
+    link: "https://music.youtube.com/",
   },
   {
     type: "app",
